@@ -1,1 +1,1 @@
-{"root":["./src/index.ts"],"version":"6.0.2"}
+{"root":["./src/index.ts","./src/features/auth/user.model.ts","./src/features/error-group/error.model.ts","./src/features/logs/logs.model.ts","./src/features/project/project.model.ts"],"version":"6.0.2"}
