@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
 
 const authProviderSchema = new mongoose.Schema({
     userId : {type : mongoose.Schema.Types.ObjectId , ref : "User"},
-    provied : {type : String , enum : ["github"] , default : "github"},
+    provider : {type : String , enum : ["github"] , default : "github"},
     providerId : {type : String , required : true},
     accessToken : {type : String , required : true}
 })
