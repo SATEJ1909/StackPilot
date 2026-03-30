@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const errorGroupSchema = new mongoose.Schema({
-    projectId : {type : mongoose.Schema.Types.ObjectId , ref : "Project" , required : true},
+    projectId : {type : mongoose.Schema.Types.ObjectId , ref : "Project" , required : true , index : true},
     hash : {type : String , required : true},
     message : {type : String , required : true},
     route : {type : String},

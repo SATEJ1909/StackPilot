@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import AuthRouter from "./features/auth/auth.routes.js";
 import ProjectRouter from "./features/project/project.routes.js";
+import LogsRouter from "./features/logs/logs.routes.js";
+
 
 const app = express();
 
@@ -13,6 +15,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/v1/auth", AuthRouter);
 app.use("/api/v1/project", ProjectRouter);
+app.use("/api/v1/logs", LogsRouter);
+
+main()
 const PORT = process.env.PORT || 5000;
 
 async function main(){
