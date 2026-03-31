@@ -20,7 +20,11 @@ const errorGroupSchema = new mongoose.Schema({
         default: "medium",
     },
 
-    aiAnalyzed: { type: Boolean, default: false } // prevent duplicate AI calls
+    aiAnalyzed: {
+        type: String,
+        enum: ["pending", "processing", "done"],
+        default: "pending"
+    } // prevent duplicate AI calls
 })
 errorGroupSchema.index({ projectId: 1, hash: 1 }, { unique: true });
 
