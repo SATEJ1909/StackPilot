@@ -1,13 +1,28 @@
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
+import crypto from "crypto";
 import { UserModel, AuthProvider } from './auth.model.js';
 
-export const getGithubAuthUrl = () => {
-    return `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=user:email`;
+export const createOAuthState = () => {
+    return crypto.randomBytes(24).toString("hex");
+};
+
+export const getGithubAuthUrl = (state: string) => {
+    const params = new URLSearchParams({
+        client_id: process.env.GITHUB_CLIENT_ID as string,
+        scope: "user:email",
+        state,
+    });
+
+    return `https://github.com/login/oauth/authorize?${params.toString()}`;
 };
 
 export const handleGithubCallback = async (code: string) => {
     try {
+        if (!code) {
+            throw new Error("Missing GitHub code");
+        }
+
         // 1. Exchange code for Access Token
         const tokenRes = await axios.post("https://github.com/login/oauth/access_token", {
             client_id: process.env.GITHUB_CLIENT_ID,
@@ -32,6 +47,10 @@ export const handleGithubCallback = async (code: string) => {
             email = emails.find((e: any) => e.primary && e.verified)?.email;
         }
 
+        if (!email) {
+            throw new Error("GitHub account has no verified primary email");
+        }
+
         // 4. Find or Create the User
         let dbUser = await UserModel.findOne({ email });
         if (!dbUser) {
@@ -54,11 +73,11 @@ export const handleGithubCallback = async (code: string) => {
                 userId: dbUser._id,
                 provider: "github",
                 providerId: githubUser.id.toString(),
-                accessToken: accessToken
+                accessToken: encryptToken(accessToken)
             });
         } else {
             // Optional: Update access token if it changed
-            provider.accessToken = accessToken;
+            provider.accessToken = encryptToken(accessToken);
             await provider.save();
         }
 
@@ -75,4 +94,27 @@ export const handleGithubCallback = async (code: string) => {
         console.error("GitHub Auth Error:", error);
         throw new Error("Authentication failed");
     }
+};
+
+const encryptToken = (token: string) => {
+    const secret = process.env.JWT_SECRET;
+
+    if (!secret) {
+        throw new Error("JWT_SECRET is required");
+    }
+
+    const key = crypto.createHash("sha256").update(secret).digest();
+    const iv = crypto.randomBytes(12);
+    const cipher = crypto.createCipheriv("aes-256-gcm", key, iv);
+    const encrypted = Buffer.concat([
+        cipher.update(token, "utf8"),
+        cipher.final(),
+    ]);
+    const authTag = cipher.getAuthTag();
+
+    return [
+        iv.toString("base64"),
+        authTag.toString("base64"),
+        encrypted.toString("base64"),
+    ].join(":");
 };

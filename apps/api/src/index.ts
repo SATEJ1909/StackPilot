@@ -12,20 +12,48 @@ import ErrorRouter from "./features/error-group/error.routes.js";
 
 const app = express();
 
-
+app.disable("x-powered-by");
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || true,
+}));
 app.use("/api/v1/auth", AuthRouter);
 app.use("/api/v1/project", ProjectRouter);
 app.use("/api/v1/logs", LogsRouter);
 app.use("/api/v1/error", ErrorRouter);
 
-main()
 const PORT = process.env.PORT || 5000;
 
 async function main(){
-    await mongoose.connect(process.env.MONGO_URI as string)
+    validateEnvironment();
+
+    const mongoUri = process.env.MONGO_URI;
+
+    if (!mongoUri) {
+        throw new Error("MONGO_URI is required");
+    }
+
+    await mongoose.connect(mongoUri)
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 
-main();
+function validateEnvironment() {
+    const required = [
+        "MONGO_URI",
+        "JWT_SECRET",
+        "GITHUB_CLIENT_ID",
+        "GITHUB_CLIENT_SECRET",
+        "OPENROUTER_API_KEY",
+    ];
+
+    const missing = required.filter((key) => !process.env[key]);
+
+    if (missing.length > 0) {
+        throw new Error(`Missing required environment variables: ${missing.join(", ")}`);
+    }
+}
+
+main().catch((error) => {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+});

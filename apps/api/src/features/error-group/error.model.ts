@@ -5,6 +5,7 @@ const errorGroupSchema = new mongoose.Schema({
     hash: { type: String, required: true },
     message: { type: String, required: true },
     route: { type: String },
+    affectedRoutes: [{ type: String }],
     count: { type: Number, default: 1 },
     lastSeenAt: { type: Date, default: Date.now },
     cause: { type: String },
@@ -25,7 +26,7 @@ const errorGroupSchema = new mongoose.Schema({
         enum: ["pending", "processing", "done"],
         default: "pending"
     } // prevent duplicate AI calls
-})
+}, { timestamps: true })
 errorGroupSchema.index({ projectId: 1, hash: 1 }, { unique: true });
 
 

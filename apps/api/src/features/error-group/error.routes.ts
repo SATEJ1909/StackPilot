@@ -1,10 +1,10 @@
 import { analyzeErrorHandler } from "./error.controller.js";
 import { Router } from "express";
+import { isAuthenticated } from "../../middleware/protect.js";
 
 
 const ErrorRouter = Router();
 
-//@ts-ignore
-ErrorRouter.post("/analyze" , analyzeErrorHandler);
+ErrorRouter.post("/analyze" , isAuthenticated , analyzeErrorHandler);
 
 export default ErrorRouter ;

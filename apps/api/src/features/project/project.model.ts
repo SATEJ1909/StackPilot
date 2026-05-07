@@ -5,7 +5,7 @@ const projectSchema = new mongoose.Schema({
     userId : {type : mongoose.Schema.Types.ObjectId , ref : "User" , required : true , index : true},
     repoUrl : {type : String , required : true , unique : true},
     projectKey : {type : String , required : true , unique : true},
-});
+}, { timestamps: true });
 
 const ProjectModel = mongoose.model("Project" , projectSchema)
 

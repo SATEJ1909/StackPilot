@@ -1,7 +1,8 @@
 import { analyzeError } from "./ai.service.js";
+import type { RequestHandler } from "express";
 
 
-export const analyzeErrorHandler = async(req : any , res : any) =>{
+export const analyzeErrorHandler: RequestHandler = async(req, res) =>{
     try {
         const data = req.body ;
         const result = await analyzeError(data);
