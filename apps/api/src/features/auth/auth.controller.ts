@@ -30,9 +30,27 @@ export const githubCallback: RequestHandler = async (req, res) => {
         }
 
         const data = await AuthService.handleGithubCallback(code);
+        const frontendUrl = process.env.FRONTEND_URL;
+
+        if (frontendUrl) {
+            const redirectUrl = new URL("/auth/callback", frontendUrl);
+            redirectUrl.searchParams.set("token", data.token);
+            res.redirect(redirectUrl.toString());
+            return;
+        }
+
         res.json(data);
     } catch (error) {
         console.error("GitHub Callback Error:", error);
+        const frontendUrl = process.env.FRONTEND_URL;
+
+        if (frontendUrl) {
+            const redirectUrl = new URL("/auth/callback", frontendUrl);
+            redirectUrl.searchParams.set("error", "authentication_failed");
+            res.redirect(redirectUrl.toString());
+            return;
+        }
+
         res.status(500).json({ error: "Authentication failed" });
     }
 }

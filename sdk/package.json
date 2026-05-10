@@ -1,0 +1,25 @@
+{
+  "name": "@stackpilot/sdk",
+  "version": "1.0.0",
+  "description": "Browser error logging SDK for StackPilot.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc index.ts --outDir dist --declaration --target ES2019 --module commonjs --moduleResolution Node --skipLibCheck",
+    "check-types": "tsc index.ts --noEmit --skipLibCheck"
+  },
+  "keywords": [
+    "logging",
+    "errors",
+    "monitoring",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

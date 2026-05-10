@@ -54,7 +54,7 @@ export const analyzeError = async (data: {
     const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout per model
 
     try {
-      console.log(`🧠 Querying: ${model}`);
+      console.log(`Querying model: ${model}`);
 
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
@@ -90,7 +90,7 @@ export const analyzeError = async (data: {
         return parsed;
       }
     } catch (err) {
-      console.log(`⚠️ Model ${model} skipped due to error/timeout`);
+      console.log(`Model ${model} skipped due to error/timeout`);
       continue;
     }
   }

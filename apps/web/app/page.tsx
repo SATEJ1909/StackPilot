@@ -1,102 +1,139 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+"use client";
 
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
+import { AuthActions } from "./components/auth-actions";
+import { Header } from "./components/header";
+import { Footer } from "./components/footer";
+import { MetricCard } from "./components/metric-card";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <ThemeImage
-          className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
-          alt="Turborepo logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>apps/web/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex min-h-screen flex-col bg-[#f6f7f9] text-[#111316]">
+      <Header showDashboard />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="border-b border-[#e1e5eb] bg-white">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-14 lg:grid-cols-[1fr_420px] lg:py-20">
+            <div className="flex max-w-3xl flex-col justify-center animate-slide-up">
+              <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#475467]">
+                AI error monitoring
+              </p>
+              <h1 className="max-w-3xl text-4xl font-black leading-[1.04] tracking-normal text-[#111316] sm:text-6xl">
+                Find production errors, group the noise, and ship the fix.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616f]">
+                StackPilot captures runtime errors from your apps, groups repeat
+                failures by project, and prepares an AI-assisted diagnosis your
+                team can act on.
+              </p>
+              <div className="mt-9 max-w-md">
+                <AuthActions />
+              </div>
+            </div>
+
+            {/* Demo card */}
+            <div className="self-center rounded-lg border border-[#d9dee7] bg-white p-5 shadow-sm animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <div className="flex items-center justify-between border-b border-[#edf0f4] pb-4">
+                <div>
+                  <p className="text-sm font-bold">Checkout service</p>
+                  <p className="mt-1 text-xs font-medium text-[#6b7584]">
+                    production
+                  </p>
+                </div>
+                <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-xs font-bold text-[#b42318]">
+                  high
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 py-5">
+                <MetricCard label="Groups" value="18" />
+                <MetricCard label="Routes" value="7" />
+                <MetricCard label="Status" value="ready" />
+              </div>
+
+              <div className="rounded-md border border-[#e3e8ef] bg-[#fbfcfd] p-4">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#667085]">
+                  likely cause
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[#303741]">
+                  Null response from payment intent API after retry timeout.
+                </p>
+              </div>
+
+              <div className="mt-4 rounded-md border border-[#e3e8ef] bg-white p-4">
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[#b42318]" />
+                  <div>
+                    <p className="text-sm font-semibold">
+                      TypeError: cannot read properties of null
+                    </p>
+                    <p className="mt-1 text-xs text-[#667085]">
+                      /checkout · 4 min ago
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section id="setup" className="mx-auto max-w-6xl px-6 py-12">
+          <div className="grid gap-6 md:grid-cols-3 stagger-children">
+            <Feature
+              title="Create a project"
+              body="Sign in with GitHub, add the repository URL, and get a unique project key."
+              icon={
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              }
             />
-            Deploy now
-          </a>
-          <a
-            href="https://turborepo.dev/docs?utm_source"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
-        </Button>
+            <Feature
+              title="Install the logger"
+              body="Use the SDK with your project key to send browser errors into the API."
+              icon={
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M16 18 22 12 16 6" />
+                  <path d="M8 6 2 12 8 18" />
+                </svg>
+              }
+            />
+            <Feature
+              title="Review AI analysis"
+              body="Open the dashboard to inspect grouped errors, affected routes, and suggested fixes."
+              icon={
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              }
+            />
+          </div>
+        </section>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://turborepo.dev?utm_source=create-turbo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turborepo.dev →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
+  );
+}
+
+function Feature({
+  title,
+  body,
+  icon,
+}: {
+  title: string;
+  body: string;
+  icon: React.ReactNode;
+}) {
+  return (
+    <article className="group rounded-lg border border-[#d9dee7] bg-white p-5 shadow-sm transition-all hover:shadow-md hover:border-[#b8c0cc]">
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-[#f2f4f7] text-[#475467] transition-colors group-hover:bg-[#15171a] group-hover:text-white">
+        {icon}
+      </div>
+      <h2 className="text-base font-bold">{title}</h2>
+      <p className="mt-3 text-sm leading-6 text-[#5f6b7a]">{body}</p>
+    </article>
   );
 }

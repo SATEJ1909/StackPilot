@@ -1,0 +1,5934 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_index_ts",
+      "community": 2,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L13",
+      "id": "src_index_app",
+      "community": 2,
+      "norm_label": "app"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L27",
+      "id": "src_index_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "validateEnvironment()",
+      "file_type": "code",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L40",
+      "id": "src_index_validateenvironment",
+      "community": 2,
+      "norm_label": "validateenvironment()"
+    },
+    {
+      "label": "ovvrride.d.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/ovvrride.d.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_ovvrride_d_ts",
+      "community": 11,
+      "norm_label": "ovvrride.d.ts"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "apps/api/src/ovvrride.d.ts",
+      "source_location": "L5",
+      "id": "src_ovvrride_d_request",
+      "community": 11,
+      "norm_label": "request"
+    },
+    {
+      "label": "auth.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_auth_auth_controller_ts",
+      "community": 2,
+      "norm_label": "auth.controller.ts"
+    },
+    {
+      "label": "githubAuth()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L5",
+      "id": "auth_auth_controller_githubauth",
+      "community": 2,
+      "norm_label": "githubauth()"
+    },
+    {
+      "label": "githubCallback()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L19",
+      "id": "auth_auth_controller_githubcallback",
+      "community": 2,
+      "norm_label": "githubcallback()"
+    },
+    {
+      "label": "getCookie()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L58",
+      "id": "auth_auth_controller_getcookie",
+      "community": 2,
+      "norm_label": "getcookie()"
+    },
+    {
+      "label": "auth.model.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_auth_auth_model_ts",
+      "community": 6,
+      "norm_label": "auth.model.ts"
+    },
+    {
+      "label": "userSchema",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L3",
+      "id": "auth_auth_model_userschema",
+      "community": 6,
+      "norm_label": "userschema"
+    },
+    {
+      "label": "authProviderSchema",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L10",
+      "id": "auth_auth_model_authproviderschema",
+      "community": 6,
+      "norm_label": "authproviderschema"
+    },
+    {
+      "label": "UserModel",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L19",
+      "id": "auth_auth_model_usermodel",
+      "community": 6,
+      "norm_label": "usermodel"
+    },
+    {
+      "label": "AuthProvider",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L20",
+      "id": "auth_auth_model_authprovider",
+      "community": 6,
+      "norm_label": "authprovider"
+    },
+    {
+      "label": "auth.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_auth_auth_routes_ts",
+      "community": 2,
+      "norm_label": "auth.routes.ts"
+    },
+    {
+      "label": "AuthRouter",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L2",
+      "id": "auth_auth_routes_authrouter",
+      "community": 2,
+      "norm_label": "authrouter"
+    },
+    {
+      "label": "auth.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_auth_auth_service_ts",
+      "community": 6,
+      "norm_label": "auth.service.ts"
+    },
+    {
+      "label": "createOAuthState()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L6",
+      "id": "auth_auth_service_createoauthstate",
+      "community": 6,
+      "norm_label": "createoauthstate()"
+    },
+    {
+      "label": "getGithubAuthUrl()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L10",
+      "id": "auth_auth_service_getgithubauthurl",
+      "community": 6,
+      "norm_label": "getgithubauthurl()"
+    },
+    {
+      "label": "handleGithubCallback()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L20",
+      "id": "auth_auth_service_handlegithubcallback",
+      "community": 6,
+      "norm_label": "handlegithubcallback()"
+    },
+    {
+      "label": "encryptToken()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L99",
+      "id": "auth_auth_service_encrypttoken",
+      "community": 6,
+      "norm_label": "encrypttoken()"
+    },
+    {
+      "label": "ai.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_error_group_ai_service_ts",
+      "community": 1,
+      "norm_label": "ai.service.ts"
+    },
+    {
+      "label": "MODELS",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L3",
+      "id": "error_group_ai_service_models",
+      "community": 1,
+      "norm_label": "models"
+    },
+    {
+      "label": "parseModelResponse()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L29",
+      "id": "error_group_ai_service_parsemodelresponse",
+      "community": 1,
+      "norm_label": "parsemodelresponse()"
+    },
+    {
+      "label": "isValidResponse()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L40",
+      "id": "error_group_ai_service_isvalidresponse",
+      "community": 1,
+      "norm_label": "isvalidresponse()"
+    },
+    {
+      "label": "analyzeError()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L45",
+      "id": "error_group_ai_service_analyzeerror",
+      "community": 1,
+      "norm_label": "analyzeerror()"
+    },
+    {
+      "label": "error.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_error_group_error_controller_ts",
+      "community": 1,
+      "norm_label": "error.controller.ts"
+    },
+    {
+      "label": "getErrorGroupsHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L5",
+      "id": "error_group_error_controller_geterrorgroupshandler",
+      "community": 1,
+      "norm_label": "geterrorgroupshandler()"
+    },
+    {
+      "label": "analyzeErrorHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L24",
+      "id": "error_group_error_controller_analyzeerrorhandler",
+      "community": 1,
+      "norm_label": "analyzeerrorhandler()"
+    },
+    {
+      "label": "error.model.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.model.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_error_group_error_model_ts",
+      "community": 1,
+      "norm_label": "error.model.ts"
+    },
+    {
+      "label": "errorGroupSchema",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.model.ts",
+      "source_location": "L3",
+      "id": "error_group_error_model_errorgroupschema",
+      "community": 1,
+      "norm_label": "errorgroupschema"
+    },
+    {
+      "label": "ErrorModel",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.model.ts",
+      "source_location": "L33",
+      "id": "error_group_error_model_errormodel",
+      "community": 1,
+      "norm_label": "errormodel"
+    },
+    {
+      "label": "error.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_error_group_error_routes_ts",
+      "community": 1,
+      "norm_label": "error.routes.ts"
+    },
+    {
+      "label": "ErrorRouter",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L6",
+      "id": "error_group_error_routes_errorrouter",
+      "community": 1,
+      "norm_label": "errorrouter"
+    },
+    {
+      "label": "error.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_error_group_error_service_ts",
+      "community": 1,
+      "norm_label": "error.service.ts"
+    },
+    {
+      "label": "toObjectId()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L5",
+      "id": "error_group_error_service_toobjectid",
+      "community": 1,
+      "norm_label": "toobjectid()"
+    },
+    {
+      "label": "getErrorGroups()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L13",
+      "id": "error_group_error_service_geterrorgroups",
+      "community": 1,
+      "norm_label": "geterrorgroups()"
+    },
+    {
+      "label": "logs.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_logs_logs_controller_ts",
+      "community": 1,
+      "norm_label": "logs.controller.ts"
+    },
+    {
+      "label": "processLogHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L5",
+      "id": "logs_logs_controller_processloghandler",
+      "community": 1,
+      "norm_label": "processloghandler()"
+    },
+    {
+      "label": "logs.model.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.model.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_logs_logs_model_ts",
+      "community": 1,
+      "norm_label": "logs.model.ts"
+    },
+    {
+      "label": "logSchema",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.model.ts",
+      "source_location": "L3",
+      "id": "logs_logs_model_logschema",
+      "community": 1,
+      "norm_label": "logschema"
+    },
+    {
+      "label": "LogModel",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.model.ts",
+      "source_location": "L12",
+      "id": "logs_logs_model_logmodel",
+      "community": 1,
+      "norm_label": "logmodel"
+    },
+    {
+      "label": "logs.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_logs_logs_routes_ts",
+      "community": 2,
+      "norm_label": "logs.routes.ts"
+    },
+    {
+      "label": "LogsRouter",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L4",
+      "id": "logs_logs_routes_logsrouter",
+      "community": 2,
+      "norm_label": "logsrouter"
+    },
+    {
+      "label": "logRateLimiter",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L6",
+      "id": "logs_logs_routes_logratelimiter",
+      "community": 2,
+      "norm_label": "logratelimiter"
+    },
+    {
+      "label": "logs.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_logs_logs_service_ts",
+      "community": 1,
+      "norm_label": "logs.service.ts"
+    },
+    {
+      "label": "processLog()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L6",
+      "id": "logs_logs_service_processlog",
+      "community": 1,
+      "norm_label": "processlog()"
+    },
+    {
+      "label": "parseTimestamp()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L126",
+      "id": "logs_logs_service_parsetimestamp",
+      "community": 1,
+      "norm_label": "parsetimestamp()"
+    },
+    {
+      "label": "runBackgroundAnalysis()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L136",
+      "id": "logs_logs_service_runbackgroundanalysis",
+      "community": 1,
+      "norm_label": "runbackgroundanalysis()"
+    },
+    {
+      "label": "project.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_project_project_controller_ts",
+      "community": 4,
+      "norm_label": "project.controller.ts"
+    },
+    {
+      "label": "createProjectHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L4",
+      "id": "project_project_controller_createprojecthandler",
+      "community": 4,
+      "norm_label": "createprojecthandler()"
+    },
+    {
+      "label": "getProjectsHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L39",
+      "id": "project_project_controller_getprojectshandler",
+      "community": 4,
+      "norm_label": "getprojectshandler()"
+    },
+    {
+      "label": "isValidProjectName()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L53",
+      "id": "project_project_controller_isvalidprojectname",
+      "community": 4,
+      "norm_label": "isvalidprojectname()"
+    },
+    {
+      "label": "isValidUrl()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L57",
+      "id": "project_project_controller_isvalidurl",
+      "community": 4,
+      "norm_label": "isvalidurl()"
+    },
+    {
+      "label": "normalizePositiveInt()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L70",
+      "id": "project_project_controller_normalizepositiveint",
+      "community": 4,
+      "norm_label": "normalizepositiveint()"
+    },
+    {
+      "label": "getProjectByIdHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L85",
+      "id": "project_project_controller_getprojectbyidhandler",
+      "community": 4,
+      "norm_label": "getprojectbyidhandler()"
+    },
+    {
+      "label": "deleteProjectByIdHandler()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L99",
+      "id": "project_project_controller_deleteprojectbyidhandler",
+      "community": 4,
+      "norm_label": "deleteprojectbyidhandler()"
+    },
+    {
+      "label": "project.model.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_project_project_model_ts",
+      "community": 1,
+      "norm_label": "project.model.ts"
+    },
+    {
+      "label": "projectSchema",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L3",
+      "id": "project_project_model_projectschema",
+      "community": 1,
+      "norm_label": "projectschema"
+    },
+    {
+      "label": "ProjectModel",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L10",
+      "id": "project_project_model_projectmodel",
+      "community": 1,
+      "norm_label": "projectmodel"
+    },
+    {
+      "label": "project.routes.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_project_project_routes_ts",
+      "community": 4,
+      "norm_label": "project.routes.ts"
+    },
+    {
+      "label": "ProjectRouter",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L5",
+      "id": "project_project_routes_projectrouter",
+      "community": 4,
+      "norm_label": "projectrouter"
+    },
+    {
+      "label": "project.service.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_features_project_project_service_ts",
+      "community": 4,
+      "norm_label": "project.service.ts"
+    },
+    {
+      "label": "GenerateProjectKey()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L7",
+      "id": "project_project_service_generateprojectkey",
+      "community": 4,
+      "norm_label": "generateprojectkey()"
+    },
+    {
+      "label": "toObjectId()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L11",
+      "id": "project_project_service_toobjectid",
+      "community": 4,
+      "norm_label": "toobjectid()"
+    },
+    {
+      "label": "createProject()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L20",
+      "id": "project_project_service_createproject",
+      "community": 4,
+      "norm_label": "createproject()"
+    },
+    {
+      "label": "getProjects()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L33",
+      "id": "project_project_service_getprojects",
+      "community": 4,
+      "norm_label": "getprojects()"
+    },
+    {
+      "label": "getProjectById()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L61",
+      "id": "project_project_service_getprojectbyid",
+      "community": 4,
+      "norm_label": "getprojectbyid()"
+    },
+    {
+      "label": "deleteProjectById()",
+      "file_type": "code",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L74",
+      "id": "project_project_service_deleteprojectbyid",
+      "community": 4,
+      "norm_label": "deleteprojectbyid()"
+    },
+    {
+      "label": "protect.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/protect.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_middleware_protect_ts",
+      "community": 4,
+      "norm_label": "protect.ts"
+    },
+    {
+      "label": "isAuthenticated()",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/protect.ts",
+      "source_location": "L4",
+      "id": "middleware_protect_isauthenticated",
+      "community": 4,
+      "norm_label": "isauthenticated()"
+    },
+    {
+      "label": "rateLimit.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_middleware_ratelimit_ts",
+      "community": 2,
+      "norm_label": "ratelimit.ts"
+    },
+    {
+      "label": "RateLimitEntry",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L3",
+      "id": "middleware_ratelimit_ratelimitentry",
+      "community": 2,
+      "norm_label": "ratelimitentry"
+    },
+    {
+      "label": "RateLimitOptions",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L8",
+      "id": "middleware_ratelimit_ratelimitoptions",
+      "community": 2,
+      "norm_label": "ratelimitoptions"
+    },
+    {
+      "label": "buckets",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L14",
+      "id": "middleware_ratelimit_buckets",
+      "community": 2,
+      "norm_label": "buckets"
+    },
+    {
+      "label": "createRateLimiter()",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L16",
+      "id": "middleware_ratelimit_createratelimiter",
+      "community": 2,
+      "norm_label": "createratelimiter()"
+    },
+    {
+      "label": "now",
+      "file_type": "code",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L46",
+      "id": "middleware_ratelimit_now",
+      "community": 2,
+      "norm_label": "now"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "apps/web/eslint.config.mjs",
+      "source_location": "L1",
+      "id": "apps_web_eslint_config_mjs",
+      "community": 12,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "eslintConfig",
+      "file_type": "code",
+      "source_file": "apps/web/eslint.config.mjs",
+      "source_location": "L5",
+      "id": "web_eslint_config_eslintconfig",
+      "community": 12,
+      "norm_label": "eslintconfig"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "apps/web/next-env.d.ts",
+      "source_location": "L1",
+      "id": "apps_web_next_env_d_ts",
+      "community": 20,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "apps/web/next.config.ts",
+      "source_location": "L1",
+      "id": "apps_web_next_config_ts",
+      "community": 13,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "apps/web/next.config.ts",
+      "source_location": "L3",
+      "id": "web_next_config_nextconfig",
+      "community": 13,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "apps/web/postcss.config.mjs",
+      "source_location": "L1",
+      "id": "apps_web_postcss_config_mjs",
+      "community": 5,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "apps/web/postcss.config.mjs",
+      "source_location": "L1",
+      "id": "web_postcss_config_config",
+      "community": 5,
+      "norm_label": "config"
+    },
+    {
+      "label": "error.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/error.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_error_tsx",
+      "community": 14,
+      "norm_label": "error.tsx"
+    },
+    {
+      "label": "GlobalError()",
+      "file_type": "code",
+      "source_file": "apps/web/app/error.tsx",
+      "source_location": "L6",
+      "id": "app_error_globalerror",
+      "community": 14,
+      "norm_label": "globalerror()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_layout_tsx",
+      "community": 9,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "inter",
+      "file_type": "code",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L5",
+      "id": "app_layout_inter",
+      "community": 9,
+      "norm_label": "inter"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L11",
+      "id": "app_layout_metadata",
+      "community": 9,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L16",
+      "id": "app_layout_rootlayout",
+      "community": 9,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "not-found.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/not-found.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_not_found_tsx",
+      "community": 15,
+      "norm_label": "not-found.tsx"
+    },
+    {
+      "label": "NotFound()",
+      "file_type": "code",
+      "source_file": "apps/web/app/not-found.tsx",
+      "source_location": "L5",
+      "id": "app_not_found_notfound",
+      "community": 15,
+      "norm_label": "notfound()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L6",
+      "id": "app_page_home",
+      "community": 0,
+      "norm_label": "home()"
+    },
+    {
+      "label": "Feature()",
+      "file_type": "code",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L119",
+      "id": "app_page_feature",
+      "community": 0,
+      "norm_label": "feature()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_auth_callback_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "CallbackState",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L9",
+      "id": "callback_page_callbackstate",
+      "community": 0,
+      "norm_label": "callbackstate"
+    },
+    {
+      "label": "AuthCallbackPage()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L11",
+      "id": "callback_page_authcallbackpage",
+      "community": 0,
+      "norm_label": "authcallbackpage()"
+    },
+    {
+      "label": "AuthCallbackContent()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L19",
+      "id": "callback_page_authcallbackcontent",
+      "community": 0,
+      "norm_label": "authcallbackcontent()"
+    },
+    {
+      "label": "CallbackShell()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L47",
+      "id": "callback_page_callbackshell",
+      "community": 0,
+      "norm_label": "callbackshell()"
+    },
+    {
+      "label": "getCopy()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L100",
+      "id": "callback_page_getcopy",
+      "community": 0,
+      "norm_label": "getcopy()"
+    },
+    {
+      "label": "Spinner()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L143",
+      "id": "callback_page_spinner",
+      "community": 0,
+      "norm_label": "spinner()"
+    },
+    {
+      "label": "WarningIcon()",
+      "file_type": "code",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L187",
+      "id": "callback_page_warningicon",
+      "community": 0,
+      "norm_label": "warningicon()"
+    },
+    {
+      "label": "auth-actions.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_components_auth_actions_tsx",
+      "community": 5,
+      "norm_label": "auth-actions.tsx"
+    },
+    {
+      "label": "AuthActions()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L7",
+      "id": "components_auth_actions_authactions",
+      "community": 5,
+      "norm_label": "authactions()"
+    },
+    {
+      "label": "GitHubIcon()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L38",
+      "id": "components_auth_actions_githubicon",
+      "community": 5,
+      "norm_label": "githubicon()"
+    },
+    {
+      "label": "DashboardIcon()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L51",
+      "id": "components_auth_actions_dashboardicon",
+      "community": 5,
+      "norm_label": "dashboardicon()"
+    },
+    {
+      "label": "footer.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/footer.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_components_footer_tsx",
+      "community": 0,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/footer.tsx",
+      "source_location": "L3",
+      "id": "components_footer_footer",
+      "community": 0,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "header.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_components_header_tsx",
+      "community": 0,
+      "norm_label": "header.tsx"
+    },
+    {
+      "label": "HeaderProps",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L6",
+      "id": "components_header_headerprops",
+      "community": 0,
+      "norm_label": "headerprops"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L11",
+      "id": "components_header_header",
+      "community": 0,
+      "norm_label": "header()"
+    },
+    {
+      "label": "metric-card.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/metric-card.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_components_metric_card_tsx",
+      "community": 0,
+      "norm_label": "metric-card.tsx"
+    },
+    {
+      "label": "MetricCard()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/metric-card.tsx",
+      "source_location": "L1",
+      "id": "components_metric_card_metriccard",
+      "community": 0,
+      "norm_label": "metriccard()"
+    },
+    {
+      "label": "skeleton.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_components_skeleton_tsx",
+      "community": 0,
+      "norm_label": "skeleton.tsx"
+    },
+    {
+      "label": "Skeleton()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L1",
+      "id": "components_skeleton_skeleton",
+      "community": 0,
+      "norm_label": "skeleton()"
+    },
+    {
+      "label": "SkeletonText()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L19",
+      "id": "components_skeleton_skeletontext",
+      "community": 0,
+      "norm_label": "skeletontext()"
+    },
+    {
+      "label": "SkeletonCard()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L41",
+      "id": "components_skeleton_skeletoncard",
+      "community": 0,
+      "norm_label": "skeletoncard()"
+    },
+    {
+      "label": "SkeletonErrorRow()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L54",
+      "id": "components_skeleton_skeletonerrorrow",
+      "community": 0,
+      "norm_label": "skeletonerrorrow()"
+    },
+    {
+      "label": "SkeletonProjectItem()",
+      "file_type": "code",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L67",
+      "id": "components_skeleton_skeletonprojectitem",
+      "community": 0,
+      "norm_label": "skeletonprojectitem()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_dashboard_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "LoadState",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L22",
+      "id": "dashboard_page_loadstate",
+      "community": 0,
+      "norm_label": "loadstate"
+    },
+    {
+      "label": "DashboardPage()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L24",
+      "id": "dashboard_page_dashboardpage",
+      "community": 0,
+      "norm_label": "dashboardpage()"
+    },
+    {
+      "label": "getSdkSnippet()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L484",
+      "id": "dashboard_page_getsdksnippet",
+      "community": 0,
+      "norm_label": "getsdksnippet()"
+    },
+    {
+      "label": "renderErrors()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L493",
+      "id": "dashboard_page_rendererrors",
+      "community": 0,
+      "norm_label": "rendererrors()"
+    },
+    {
+      "label": "severityClassName()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L599",
+      "id": "dashboard_page_severityclassname",
+      "community": 0,
+      "norm_label": "severityclassname()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_dashboard_projects_id_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "LoadState",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L20",
+      "id": "id_page_loadstate",
+      "community": 0,
+      "norm_label": "loadstate"
+    },
+    {
+      "label": "ProjectDetailPage()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L22",
+      "id": "id_page_projectdetailpage",
+      "community": 0,
+      "norm_label": "projectdetailpage()"
+    },
+    {
+      "label": "severityClassName()",
+      "file_type": "code",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L299",
+      "id": "id_page_severityclassname",
+      "community": 0,
+      "norm_label": "severityclassname()"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L1",
+      "id": "apps_web_lib_api_ts",
+      "community": 0,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "Project",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L6",
+      "id": "lib_api_project",
+      "community": 0,
+      "norm_label": "project"
+    },
+    {
+      "label": "ProjectList",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L14",
+      "id": "lib_api_projectlist",
+      "community": 0,
+      "norm_label": "projectlist"
+    },
+    {
+      "label": "ErrorGroup",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L21",
+      "id": "lib_api_errorgroup",
+      "community": 0,
+      "norm_label": "errorgroup"
+    },
+    {
+      "label": "AnalyzeResult",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L37",
+      "id": "lib_api_analyzeresult",
+      "community": 0,
+      "norm_label": "analyzeresult"
+    },
+    {
+      "label": "ApiEnvelope",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L45",
+      "id": "lib_api_apienvelope",
+      "community": 0,
+      "norm_label": "apienvelope"
+    },
+    {
+      "label": "request()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L57",
+      "id": "lib_api_request",
+      "community": 0,
+      "norm_label": "request()"
+    },
+    {
+      "label": "fetchProjects()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L94",
+      "id": "lib_api_fetchprojects",
+      "community": 0,
+      "norm_label": "fetchprojects()"
+    },
+    {
+      "label": "fetchProject()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L98",
+      "id": "lib_api_fetchproject",
+      "community": 0,
+      "norm_label": "fetchproject()"
+    },
+    {
+      "label": "createProject()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L102",
+      "id": "lib_api_createproject",
+      "community": 4,
+      "norm_label": "createproject()"
+    },
+    {
+      "label": "deleteProject()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L109",
+      "id": "lib_api_deleteproject",
+      "community": 0,
+      "norm_label": "deleteproject()"
+    },
+    {
+      "label": "fetchErrorGroups()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L115",
+      "id": "lib_api_fetcherrorgroups",
+      "community": 0,
+      "norm_label": "fetcherrorgroups()"
+    },
+    {
+      "label": "analyzeError()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L121",
+      "id": "lib_api_analyzeerror",
+      "community": 0,
+      "norm_label": "analyzeerror()"
+    },
+    {
+      "label": "auth.ts",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L1",
+      "id": "apps_web_lib_auth_ts",
+      "community": 0,
+      "norm_label": "auth.ts"
+    },
+    {
+      "label": "getToken()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L8",
+      "id": "lib_auth_gettoken",
+      "community": 0,
+      "norm_label": "gettoken()"
+    },
+    {
+      "label": "setToken()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L16",
+      "id": "lib_auth_settoken",
+      "community": 0,
+      "norm_label": "settoken()"
+    },
+    {
+      "label": "clearToken()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L21",
+      "id": "lib_auth_cleartoken",
+      "community": 0,
+      "norm_label": "cleartoken()"
+    },
+    {
+      "label": "isAuthenticated()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L26",
+      "id": "lib_auth_isauthenticated",
+      "community": 4,
+      "norm_label": "isauthenticated()"
+    },
+    {
+      "label": "subscribeToToken()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L30",
+      "id": "lib_auth_subscribetotoken",
+      "community": 0,
+      "norm_label": "subscribetotoken()"
+    },
+    {
+      "label": "useAuthToken()",
+      "file_type": "code",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L40",
+      "id": "lib_auth_useauthtoken",
+      "community": 0,
+      "norm_label": "useauthtoken()"
+    },
+    {
+      "label": "config.ts",
+      "file_type": "code",
+      "source_file": "apps/web/lib/config.ts",
+      "source_location": "L1",
+      "id": "apps_web_lib_config_ts",
+      "community": 5,
+      "norm_label": "config.ts"
+    },
+    {
+      "label": "base.js",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/base.js",
+      "source_location": "L1",
+      "id": "packages_eslint_config_base_js",
+      "community": 5,
+      "norm_label": "base.js"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/base.js",
+      "source_location": "L12",
+      "id": "eslint_config_base_config",
+      "community": 5,
+      "norm_label": "config"
+    },
+    {
+      "label": "next.js",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L1",
+      "id": "packages_eslint_config_next_js",
+      "community": 5,
+      "norm_label": "next.js"
+    },
+    {
+      "label": "nextJsConfig",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L16",
+      "id": "eslint_config_next_nextjsconfig",
+      "community": 5,
+      "norm_label": "nextjsconfig"
+    },
+    {
+      "label": "react-internal.js",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L1",
+      "id": "packages_eslint_config_react_internal_js",
+      "community": 5,
+      "norm_label": "react-internal.js"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L13",
+      "id": "eslint_config_react_internal_config",
+      "community": 5,
+      "norm_label": "config"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "packages/ui/eslint.config.mjs",
+      "source_location": "L1",
+      "id": "packages_ui_eslint_config_mjs",
+      "community": 21,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "packages/ui/src/button.tsx",
+      "source_location": "L1",
+      "id": "packages_ui_src_button_tsx",
+      "community": 10,
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "ButtonProps",
+      "file_type": "code",
+      "source_file": "packages/ui/src/button.tsx",
+      "source_location": "L5",
+      "id": "src_button_buttonprops",
+      "community": 10,
+      "norm_label": "buttonprops"
+    },
+    {
+      "label": "Button()",
+      "file_type": "code",
+      "source_file": "packages/ui/src/button.tsx",
+      "source_location": "L11",
+      "id": "src_button_button",
+      "community": 10,
+      "norm_label": "button()"
+    },
+    {
+      "label": "card.tsx",
+      "file_type": "code",
+      "source_file": "packages/ui/src/card.tsx",
+      "source_location": "L1",
+      "id": "packages_ui_src_card_tsx",
+      "community": 16,
+      "norm_label": "card.tsx"
+    },
+    {
+      "label": "Card()",
+      "file_type": "code",
+      "source_file": "packages/ui/src/card.tsx",
+      "source_location": "L3",
+      "id": "src_card_card",
+      "community": 16,
+      "norm_label": "card()"
+    },
+    {
+      "label": "code.tsx",
+      "file_type": "code",
+      "source_file": "packages/ui/src/code.tsx",
+      "source_location": "L1",
+      "id": "packages_ui_src_code_tsx",
+      "community": 17,
+      "norm_label": "code.tsx"
+    },
+    {
+      "label": "Code()",
+      "file_type": "code",
+      "source_file": "packages/ui/src/code.tsx",
+      "source_location": "L3",
+      "id": "src_code_code",
+      "community": 17,
+      "norm_label": "code()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L1",
+      "id": "sdk_index_ts",
+      "community": 2,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "LoggerConfig",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L1",
+      "id": "sdk_index_loggerconfig",
+      "community": 2,
+      "norm_label": "loggerconfig"
+    },
+    {
+      "label": "ErrorPayload",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L6",
+      "id": "sdk_index_errorpayload",
+      "community": 2,
+      "norm_label": "errorpayload"
+    },
+    {
+      "label": "getRoute()",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L18",
+      "id": "sdk_index_getroute",
+      "community": 2,
+      "norm_label": "getroute()"
+    },
+    {
+      "label": "sendLog()",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L26",
+      "id": "sdk_index_sendlog",
+      "community": 2,
+      "norm_label": "sendlog()"
+    },
+    {
+      "label": "logError()",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L40",
+      "id": "sdk_index_logerror",
+      "community": 2,
+      "norm_label": "logerror()"
+    },
+    {
+      "label": "initLogger()",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L59",
+      "id": "sdk_index_initlogger",
+      "community": 2,
+      "norm_label": "initlogger()"
+    },
+    {
+      "label": "resetLogger()",
+      "file_type": "code",
+      "source_file": "sdk/index.ts",
+      "source_location": "L96",
+      "id": "sdk_index_resetlogger",
+      "community": 2,
+      "norm_label": "resetlogger()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 3,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "AI Copilot",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "ai_copilot_readme_ai_copilot",
+      "community": 3,
+      "norm_label": "ai copilot"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "id": "ai_copilot_readme_project_structure",
+      "community": 3,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "code:text (apps/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "id": "ai_copilot_readme_codeblock_1",
+      "community": 3,
+      "norm_label": "code:text (apps/)"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "ai_copilot_readme_stack",
+      "community": 3,
+      "norm_label": "stack"
+    },
+    {
+      "label": "What is already in the repo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "id": "ai_copilot_readme_what_is_already_in_the_repo",
+      "community": 3,
+      "norm_label": "what is already in the repo"
+    },
+    {
+      "label": "`apps/web`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "id": "ai_copilot_readme_apps_web",
+      "community": 3,
+      "norm_label": "`apps/web`"
+    },
+    {
+      "label": "`apps/api`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "id": "ai_copilot_readme_apps_api",
+      "community": 3,
+      "norm_label": "`apps/api`"
+    },
+    {
+      "label": "Existing backend models",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "id": "ai_copilot_readme_existing_backend_models",
+      "community": 3,
+      "norm_label": "existing backend models"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "id": "ai_copilot_readme_getting_started",
+      "community": 3,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "id": "ai_copilot_readme_requirements",
+      "community": 3,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Install dependencies",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "id": "ai_copilot_readme_install_dependencies",
+      "community": 3,
+      "norm_label": "install dependencies"
+    },
+    {
+      "label": "code:sh (pnpm install)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L81",
+      "id": "ai_copilot_readme_codeblock_2",
+      "community": 3,
+      "norm_label": "code:sh (pnpm install)"
+    },
+    {
+      "label": "Run the whole monorepo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "id": "ai_copilot_readme_run_the_whole_monorepo",
+      "community": 3,
+      "norm_label": "run the whole monorepo"
+    },
+    {
+      "label": "code:sh (pnpm dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "id": "ai_copilot_readme_codeblock_3",
+      "community": 3,
+      "norm_label": "code:sh (pnpm dev)"
+    },
+    {
+      "label": "Useful Commands",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "id": "ai_copilot_readme_useful_commands",
+      "community": 3,
+      "norm_label": "useful commands"
+    },
+    {
+      "label": "From the repo root",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "id": "ai_copilot_readme_from_the_repo_root",
+      "community": 3,
+      "norm_label": "from the repo root"
+    },
+    {
+      "label": "code:sh (pnpm dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "id": "ai_copilot_readme_codeblock_4",
+      "community": 3,
+      "norm_label": "code:sh (pnpm dev)"
+    },
+    {
+      "label": "Run only the web app",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L105",
+      "id": "ai_copilot_readme_run_only_the_web_app",
+      "community": 3,
+      "norm_label": "run only the web app"
+    },
+    {
+      "label": "code:sh (pnpm --filter web dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L107",
+      "id": "ai_copilot_readme_codeblock_5",
+      "community": 3,
+      "norm_label": "code:sh (pnpm --filter web dev)"
+    },
+    {
+      "label": "Run only the API app",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "id": "ai_copilot_readme_run_only_the_api_app",
+      "community": 3,
+      "norm_label": "run only the api app"
+    },
+    {
+      "label": "code:sh (pnpm --filter api dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "id": "ai_copilot_readme_codeblock_6",
+      "community": 3,
+      "norm_label": "code:sh (pnpm --filter api dev)"
+    },
+    {
+      "label": "Current State",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "id": "ai_copilot_readme_current_state",
+      "community": 3,
+      "norm_label": "current state"
+    },
+    {
+      "label": "Next steps for the project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "id": "ai_copilot_readme_next_steps_for_the_project",
+      "community": 3,
+      "norm_label": "next steps for the project"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "apps/web/AGENTS.md",
+      "source_location": "L1",
+      "id": "apps_web_agents_md",
+      "community": 18,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "This is NOT the Next.js you know",
+      "file_type": "document",
+      "source_file": "apps/web/AGENTS.md",
+      "source_location": "L2",
+      "id": "web_agents_this_is_not_the_next_js_you_know",
+      "community": 18,
+      "norm_label": "this is not the next.js you know"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "apps/web/CLAUDE.md",
+      "source_location": "L1",
+      "id": "apps_web_claude_md",
+      "community": 22,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "apps/web/README.md",
+      "source_location": "L1",
+      "id": "apps_web_readme_md",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "apps/web/README.md",
+      "source_location": "L3",
+      "id": "web_readme_getting_started",
+      "community": 8,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "code:bash (npm run dev)",
+      "file_type": "document",
+      "source_file": "apps/web/README.md",
+      "source_location": "L7",
+      "id": "web_readme_codeblock_1",
+      "community": 8,
+      "norm_label": "code:bash (npm run dev)"
+    },
+    {
+      "label": "Learn More",
+      "file_type": "document",
+      "source_file": "apps/web/README.md",
+      "source_location": "L23",
+      "id": "web_readme_learn_more",
+      "community": 8,
+      "norm_label": "learn more"
+    },
+    {
+      "label": "Deploy on Vercel",
+      "file_type": "document",
+      "source_file": "apps/web/README.md",
+      "source_location": "L32",
+      "id": "web_readme_deploy_on_vercel",
+      "community": 8,
+      "norm_label": "deploy on vercel"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "packages/eslint-config/README.md",
+      "source_location": "L1",
+      "id": "packages_eslint_config_readme_md",
+      "community": 19,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "`@turbo/eslint-config`",
+      "file_type": "document",
+      "source_file": "packages/eslint-config/README.md",
+      "source_location": "L1",
+      "id": "eslint_config_readme_turbo_eslint_config",
+      "community": 19,
+      "norm_label": "`@turbo/eslint-config`"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L1",
+      "id": "sdk_readme_md",
+      "community": 7,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "StackPilot SDK",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L1",
+      "id": "sdk_readme_stackpilot_sdk",
+      "community": 7,
+      "norm_label": "stackpilot sdk"
+    },
+    {
+      "label": "Install",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L5",
+      "id": "sdk_readme_install",
+      "community": 7,
+      "norm_label": "install"
+    },
+    {
+      "label": "code:sh (pnpm add @stackpilot/sdk)",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L7",
+      "id": "sdk_readme_codeblock_1",
+      "community": 7,
+      "norm_label": "code:sh (pnpm add @stackpilot/sdk)"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L11",
+      "id": "sdk_readme_setup",
+      "community": 7,
+      "norm_label": "setup"
+    },
+    {
+      "label": "code:ts (import { initLogger } from \"@stackpilot/sdk\";)",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L15",
+      "id": "sdk_readme_codeblock_2",
+      "community": 7,
+      "norm_label": "code:ts (import { initlogger } from \"@stackpilot/sdk\";)"
+    },
+    {
+      "label": "Manual Logging",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L24",
+      "id": "sdk_readme_manual_logging",
+      "community": 7,
+      "norm_label": "manual logging"
+    },
+    {
+      "label": "code:ts (import { logError } from \"@stackpilot/sdk\";)",
+      "file_type": "document",
+      "source_file": "sdk/README.md",
+      "source_location": "L26",
+      "id": "sdk_readme_codeblock_3",
+      "community": 7,
+      "norm_label": "code:ts (import { logerror } from \"@stackpilot/sdk\";)"
+    },
+    {
+      "label": "Metric()",
+      "file_type": "code",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L113",
+      "community": 0,
+      "norm_label": "metric()",
+      "id": "app_page_metric"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "apps_api_src_features_auth_auth_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "apps_api_src_features_project_project_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "apps_api_src_features_logs_logs_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "apps_api_src_features_error_group_error_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "src_index_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "src_index_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "apps_api_src_index_ts",
+      "target": "src_index_validateenvironment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "src_index_app"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index_main",
+      "target": "src_index_validateenvironment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "src_index_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "src_index_validateenvironment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/ovvrride.d.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_src_ovvrride_d_ts",
+      "target": "src_ovvrride_d_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/ovvrride.d.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_ovvrride_d_ts",
+      "target": "lib_api_request"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_controller_ts",
+      "target": "apps_api_src_features_auth_auth_service_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_controller_ts",
+      "target": "auth_auth_controller_githubauth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_controller_ts",
+      "target": "auth_auth_controller_githubcallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_controller_ts",
+      "target": "auth_auth_controller_getcookie"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_routes_ts",
+      "target": "apps_api_src_features_auth_auth_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_routes_ts",
+      "target": "auth_auth_controller_githubauth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.controller.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_auth_controller_githubcallback",
+      "target": "auth_auth_controller_getcookie"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_routes_ts",
+      "target": "auth_auth_controller_githubcallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_model_ts",
+      "target": "auth_auth_model_userschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_model_ts",
+      "target": "auth_auth_model_authproviderschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_model_ts",
+      "target": "auth_auth_model_usermodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.model.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_model_ts",
+      "target": "auth_auth_model_authprovider"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "apps_api_src_features_auth_auth_model_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_model_usermodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_model_authprovider"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_routes_ts",
+      "target": "auth_auth_routes_authrouter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "apps_api_src_features_auth_auth_routes_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_service_createoauthstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_service_getgithubauthurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_service_handlegithubcallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_auth_auth_service_ts",
+      "target": "auth_auth_service_encrypttoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/auth/auth.service.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_auth_service_handlegithubcallback",
+      "target": "auth_auth_service_encrypttoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_ai_service_ts",
+      "target": "error_group_ai_service_models"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_ai_service_ts",
+      "target": "error_group_ai_service_parsemodelresponse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_ai_service_ts",
+      "target": "error_group_ai_service_isvalidresponse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_ai_service_ts",
+      "target": "error_group_ai_service_analyzeerror"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "apps_api_src_features_error_group_ai_service_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "apps_api_src_features_error_group_ai_service_ts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "error_group_ai_service_analyzeerror",
+      "target": "error_group_ai_service_parsemodelresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/ai.service.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "error_group_ai_service_analyzeerror",
+      "target": "error_group_ai_service_isvalidresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "error_group_ai_service_analyzeerror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "error_group_ai_service_analyzeerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "error_group_error_controller_analyzeerrorhandler",
+      "target": "error_group_ai_service_analyzeerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "logs_logs_service_runbackgroundanalysis",
+      "target": "error_group_ai_service_analyzeerror"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "apps_api_src_features_error_group_error_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "error_group_error_service_geterrorgroups"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "error_group_error_controller_geterrorgroupshandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_controller_ts",
+      "target": "error_group_error_controller_analyzeerrorhandler"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "apps_api_src_features_error_group_error_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "error_group_error_controller_geterrorgroupshandler"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/error-group/error.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "error_group_error_controller_geterrorgroupshandler",
+      "target": "error_group_error_service_geterrorgroups"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "error_group_error_controller_analyzeerrorhandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_model_ts",
+      "target": "error_group_error_model_errorgroupschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.model.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_model_ts",
+      "target": "error_group_error_model_errormodel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "apps_api_src_features_error_group_error_model_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "apps_api_src_features_error_group_error_model_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "apps_api_src_features_error_group_error_model_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "error_group_error_model_errormodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "error_group_error_model_errormodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "error_group_error_model_errormodel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "apps_api_src_middleware_protect_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "middleware_protect_isauthenticated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "error_group_error_routes_errorrouter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "apps_api_src_features_error_group_error_routes_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_routes_ts",
+      "target": "lib_auth_isauthenticated"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "apps_api_src_features_project_project_model_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "project_project_model_projectmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "error_group_error_service_toobjectid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "error_group_error_service_geterrorgroups"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_error_group_error_service_ts",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "error_group_error_service_geterrorgroups",
+      "target": "error_group_error_service_toobjectid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/error-group/error.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "error_group_error_service_geterrorgroups",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_controller_ts",
+      "target": "apps_api_src_features_logs_logs_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_controller_ts",
+      "target": "logs_logs_service_processlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_controller_ts",
+      "target": "logs_logs_controller_processloghandler"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "apps_api_src_features_logs_logs_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "logs_logs_controller_processloghandler"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/logs/logs.controller.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "logs_logs_controller_processloghandler",
+      "target": "logs_logs_service_processlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_model_ts",
+      "target": "logs_logs_model_logschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.model.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_model_ts",
+      "target": "logs_logs_model_logmodel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "apps_api_src_features_logs_logs_model_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "apps_api_src_features_logs_logs_model_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "logs_logs_model_logmodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "logs_logs_model_logmodel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "apps_api_src_middleware_ratelimit_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "middleware_ratelimit_createratelimiter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "logs_logs_routes_logsrouter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_routes_ts",
+      "target": "logs_logs_routes_logratelimiter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "apps_api_src_features_logs_logs_routes_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "apps_api_src_features_project_project_model_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "project_project_model_projectmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "logs_logs_service_processlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "logs_logs_service_parsetimestamp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_logs_logs_service_ts",
+      "target": "logs_logs_service_runbackgroundanalysis"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "logs_logs_service_processlog",
+      "target": "logs_logs_service_parsetimestamp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/logs/logs.service.ts",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "logs_logs_service_processlog",
+      "target": "logs_logs_service_runbackgroundanalysis"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "apps_api_src_features_project_project_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_service_createproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_service_getprojectbyid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_service_getprojects"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_service_deleteprojectbyid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_createprojecthandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_getprojectshandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_isvalidprojectname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_isvalidurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_normalizepositiveint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_getprojectbyidhandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "project_project_controller_deleteprojectbyidhandler"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "apps_api_src_features_project_project_controller_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_controller_ts",
+      "target": "lib_api_createproject"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "apps_api_src_features_project_project_controller_ts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_controller_createprojecthandler",
+      "target": "project_project_controller_isvalidprojectname"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_controller_createprojecthandler",
+      "target": "project_project_controller_isvalidurl"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "project_project_controller_createprojecthandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "project_project_controller_createprojecthandler"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_controller_getprojectshandler",
+      "target": "project_project_controller_normalizepositiveint"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "project_project_controller_getprojectshandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "project_project_controller_getprojectshandler",
+      "target": "project_project_service_getprojects"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "project_project_controller_getprojectshandler"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "project_project_controller_getprojectbyidhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "project_project_controller_getprojectbyidhandler",
+      "target": "project_project_service_getprojectbyid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "project_project_controller_getprojectbyidhandler"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "project_project_controller_deleteprojectbyidhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/api/src/features/project/project.controller.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "project_project_controller_deleteprojectbyidhandler",
+      "target": "project_project_service_deleteprojectbyid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "project_project_controller_deleteprojectbyidhandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_model_ts",
+      "target": "project_project_model_projectschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_model_ts",
+      "target": "project_project_model_projectmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "apps_api_src_features_project_project_model_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_model_projectmodel",
+      "target": "project_project_model_projectschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_model_projectmodel"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "apps_api_src_middleware_protect_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "middleware_protect_isauthenticated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_routes_ts",
+      "target": "project_project_routes_projectrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "project_project_routes_projectrouter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "apps_api_src_middleware_protect_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_routes_projectrouter",
+      "target": "lib_auth_isauthenticated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_generateprojectkey"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_createproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_getprojects"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_getprojectbyid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "project_project_service_deleteprojectbyid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_features_project_project_service_ts",
+      "target": "lib_api_createproject"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "project_project_service_createproject",
+      "target": "project_project_service_generateprojectkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_api_createproject",
+      "target": "project_project_service_generateprojectkey"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "project_project_service_createproject",
+      "target": "project_project_service_toobjectid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_service_getprojects",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_service_getprojectbyid",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "project_project_service_deleteprojectbyid",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/features/project/project.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_api_createproject",
+      "target": "project_project_service_toobjectid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/protect.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_src_middleware_protect_ts",
+      "target": "middleware_protect_isauthenticated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/protect.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_protect_ts",
+      "target": "lib_auth_isauthenticated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_ratelimit_ts",
+      "target": "middleware_ratelimit_ratelimitentry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_ratelimit_ts",
+      "target": "middleware_ratelimit_ratelimitoptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_ratelimit_ts",
+      "target": "middleware_ratelimit_buckets"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_ratelimit_ts",
+      "target": "middleware_ratelimit_createratelimiter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/middleware/rateLimit.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_middleware_ratelimit_ts",
+      "target": "middleware_ratelimit_now"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/eslint.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_eslint_config_mjs",
+      "target": "web_eslint_config_eslintconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_next_config_ts",
+      "target": "web_next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_web_postcss_config_mjs",
+      "target": "web_postcss_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_postcss_config_mjs",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/error.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_error_tsx",
+      "target": "app_error_globalerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_app_layout_tsx",
+      "target": "app_layout_inter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_layout_tsx",
+      "target": "app_layout_metadata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/layout.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_layout_tsx",
+      "target": "app_layout_rootlayout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/not-found.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_app_not_found_tsx",
+      "target": "app_not_found_notfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_app_components_auth_actions_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "components_auth_actions_authactions"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_app_components_header_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_app_components_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_app_components_metric_card_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "components_metric_card_metriccard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "app_page_home"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/page.tsx",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "app_page_feature"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L475",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "app_page_metric"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_lib_auth_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_auth_settoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_callbackstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_authcallbackpage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_authcallbackcontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_callbackshell"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_getcopy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L143",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_spinner"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L187",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "callback_page_warningicon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_lib_api_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_createproject"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_deleteproject"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_errorgroup"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_fetcherrorgroups"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_fetchproject"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_api_project"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_auth_cleartoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "id_page_loadstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "dashboard_page_dashboardpage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L466",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "dashboard_page_getsdksnippet"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L486",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "dashboard_page_rendererrors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L555",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "dashboard_page_severityclassname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_app_page_tsx",
+      "target": "id_page_projectdetailpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "apps_web_lib_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "lib_auth_settoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_callbackstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_authcallbackpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_authcallbackcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_callbackshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_getcopy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_spinner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "apps_web_app_auth_callback_page_tsx",
+      "target": "callback_page_warningicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/auth/callback/page.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "callback_page_callbackshell",
+      "target": "callback_page_getcopy"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "apps_web_lib_config_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "apps_web_lib_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "lib_auth_useauthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "components_auth_actions_authactions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "components_auth_actions_githubicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "apps_web_app_components_auth_actions_tsx",
+      "target": "components_auth_actions_dashboardicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_auth_actions_authactions",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_auth_actions_authactions",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_auth_actions_authactions",
+      "target": "apps_web_lib_auth_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_auth_actions_authactions",
+      "target": "components_auth_actions_githubicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/auth-actions.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_auth_actions_authactions",
+      "target": "components_auth_actions_dashboardicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_app_components_footer_tsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_app_components_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_app_components_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_components_header_tsx",
+      "target": "apps_web_lib_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_components_header_tsx",
+      "target": "lib_auth_cleartoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_web_app_components_header_tsx",
+      "target": "lib_auth_useauthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_components_header_tsx",
+      "target": "components_header_headerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "apps_web_app_components_header_tsx",
+      "target": "components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_app_components_header_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_app_components_header_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/app/components/header.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "components_header_header",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/metric-card.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_web_app_components_metric_card_tsx",
+      "target": "components_metric_card_metriccard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_app_components_metric_card_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_metric_card_metriccard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "apps_web_app_components_skeleton_tsx",
+      "target": "components_skeleton_skeleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "apps_web_app_components_skeleton_tsx",
+      "target": "components_skeleton_skeletontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "apps_web_app_components_skeleton_tsx",
+      "target": "components_skeleton_skeletoncard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "apps_web_app_components_skeleton_tsx",
+      "target": "components_skeleton_skeletonerrorrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/components/skeleton.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "apps_web_app_components_skeleton_tsx",
+      "target": "components_skeleton_skeletonprojectitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_app_components_skeleton_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_app_components_skeleton_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_skeleton_skeletoncard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "components_skeleton_skeletoncard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_skeleton_skeletonerrorrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "components_skeleton_skeletonerrorrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "components_skeleton_skeletonprojectitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_analyzeerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_createproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_deleteproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_errorgroup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_fetcherrorgroups",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_fetchprojects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_api_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_lib_config_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "apps_web_lib_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_auth_cleartoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "lib_auth_useauthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "dashboard_page_loadstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "dashboard_page_dashboardpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L484",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "dashboard_page_getsdksnippet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L493",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "dashboard_page_rendererrors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L599",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_page_tsx",
+      "target": "dashboard_page_severityclassname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L448",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_page_dashboardpage",
+      "target": "dashboard_page_getsdksnippet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L458",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_page_dashboardpage",
+      "target": "dashboard_page_rendererrors"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/app/dashboard/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "dashboard_page_dashboardpage",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_analyzeerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_errorgroup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_fetcherrorgroups",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_fetchproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_lib_config_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_lib_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "lib_auth_useauthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_loadstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_projectdetailpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "apps_web_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_severityclassname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/app/dashboard/projects/[id]/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "id_page_projectdetailpage",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "apps_web_lib_auth_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_auth_cleartoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_auth_gettoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_projectlist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_errorgroup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_analyzeresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_apienvelope"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_request"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_fetchprojects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_fetchproject"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_createproject"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_deleteproject"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_fetcherrorgroups"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "apps_web_lib_api_ts",
+      "target": "lib_api_analyzeerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "lib_api_fetchprojects",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_api_fetchproject",
+      "target": "lib_api_request"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_api_createproject",
+      "target": "lib_api_request"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_api_fetcherrorgroups",
+      "target": "lib_api_request"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "lib_api_analyzeerror",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "lib_api_request",
+      "target": "lib_auth_gettoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/lib/api.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "lib_api_request",
+      "target": "lib_auth_cleartoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_gettoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_settoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_cleartoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_isauthenticated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_subscribetotoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_web_lib_auth_ts",
+      "target": "lib_auth_useauthtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/lib/auth.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_auth_isauthenticated",
+      "target": "lib_auth_gettoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/base.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_base_js",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_next_js",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "contains",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_react_internal_js",
+      "target": "apps_web_lib_config_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/base.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "packages_eslint_config_base_js",
+      "target": "eslint_config_base_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_next_js",
+      "target": "packages_eslint_config_base_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_react_internal_js",
+      "target": "packages_eslint_config_base_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "packages_eslint_config_next_js",
+      "target": "eslint_config_base_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "packages_eslint_config_react_internal_js",
+      "target": "eslint_config_base_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/next.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_eslint_config_next_js",
+      "target": "eslint_config_next_nextjsconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/react-internal.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "packages_eslint_config_react_internal_js",
+      "target": "eslint_config_react_internal_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ui/src/button.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_ui_src_button_tsx",
+      "target": "src_button_buttonprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ui/src/button.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_ui_src_button_tsx",
+      "target": "src_button_button"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ui/src/card.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_ui_src_card_tsx",
+      "target": "src_card_card"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/ui/src/code.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "packages_ui_src_code_tsx",
+      "target": "src_code_code"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_loggerconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_errorpayload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_getroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_sendlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_logerror"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_initlogger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_ts",
+      "target": "sdk_index_resetlogger"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_logerror",
+      "target": "sdk_index_getroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/index.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sdk_index_logerror",
+      "target": "sdk_index_sendlog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "ai_copilot_readme_ai_copilot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_project_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_what_is_already_in_the_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_getting_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_useful_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_current_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_ai_copilot",
+      "target": "ai_copilot_readme_next_steps_for_the_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_project_structure",
+      "target": "ai_copilot_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_what_is_already_in_the_repo",
+      "target": "ai_copilot_readme_apps_web",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_what_is_already_in_the_repo",
+      "target": "ai_copilot_readme_apps_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_what_is_already_in_the_repo",
+      "target": "ai_copilot_readme_existing_backend_models",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_getting_started",
+      "target": "ai_copilot_readme_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_getting_started",
+      "target": "ai_copilot_readme_install_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_getting_started",
+      "target": "ai_copilot_readme_run_the_whole_monorepo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_install_dependencies",
+      "target": "ai_copilot_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_run_the_whole_monorepo",
+      "target": "ai_copilot_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_useful_commands",
+      "target": "ai_copilot_readme_from_the_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_useful_commands",
+      "target": "ai_copilot_readme_run_only_the_web_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_useful_commands",
+      "target": "ai_copilot_readme_run_only_the_api_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_from_the_repo_root",
+      "target": "ai_copilot_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_run_only_the_web_app",
+      "target": "ai_copilot_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "ai_copilot_readme_run_only_the_api_app",
+      "target": "ai_copilot_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/AGENTS.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "apps_web_agents_md",
+      "target": "web_agents_this_is_not_the_next_js_you_know",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "apps_web_readme_md",
+      "target": "web_readme_getting_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_readme_md",
+      "target": "web_readme_learn_more",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "apps_web_readme_md",
+      "target": "web_readme_deploy_on_vercel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_readme_getting_started",
+      "target": "web_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/eslint-config/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "packages_eslint_config_readme_md",
+      "target": "eslint_config_readme_turbo_eslint_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "sdk_readme_md",
+      "target": "sdk_readme_stackpilot_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "sdk_readme_stackpilot_sdk",
+      "target": "sdk_readme_install",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "sdk_readme_stackpilot_sdk",
+      "target": "sdk_readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "sdk_readme_stackpilot_sdk",
+      "target": "sdk_readme_manual_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "sdk_readme_install",
+      "target": "sdk_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "sdk_readme_setup",
+      "target": "sdk_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sdk/README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "sdk_readme_manual_logging",
+      "target": "sdk_readme_codeblock_3",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "8a21f7e826d286e594b31d4d7fbfa932b9f3dcec"
+}

@@ -1,6 +1,8 @@
 import mongoose from "mongoose"
 import { ProjectModel } from "./project.model.js";
 import crypto from "crypto";
+import { ErrorModel } from "../error-group/error.model.js";
+import { LogModel } from "../logs/logs.model.js";
 
 const GenerateProjectKey = () => {
     return crypto.randomBytes(16).toString("hex");
@@ -39,7 +41,7 @@ export const getProjects = async (
     // 1. Fetch data and total count in parallel for speed
     const [projects, total] = await Promise.all([
         ProjectModel.find({ userId: userObjectId })
-            .select("name repoUrl createdAt") // 2. Projection: Only get what the UI needs
+            .select("name repoUrl projectKey createdAt") // 2. Projection: Only get what the UI needs
             .sort({ createdAt: -1 })         // 3. Sorting: Newest first
             .skip(skip)
             .limit(limit)
@@ -63,7 +65,7 @@ export const getProjectById = async (projectId: string, userId: string) => {
     const project = await ProjectModel.findOne({
         _id: projectObjectId,
         userId: userObjectId
-    });
+    }).lean();
     if (!project) throw new Error("Project not found or access denied");
     return project;
 }
@@ -73,10 +75,18 @@ export const deleteProjectById = async (projectId: string, userId: string) => {
     const projectObjectId = toObjectId(projectId, "Invalid project id");
     const userObjectId = toObjectId(userId, "Invalid user id");
 
-    const project = await ProjectModel.findOneAndDelete({
+    const project = await ProjectModel.findOne({
         _id: projectObjectId,
         userId: userObjectId
-    });
+    }).select("_id").lean();
+
     if (!project) throw new Error("Project not found or access denied");
+
+    await Promise.all([
+        LogModel.deleteMany({ projectId: projectObjectId }),
+        ErrorModel.deleteMany({ projectId: projectObjectId }),
+        ProjectModel.deleteOne({ _id: projectObjectId, userId: userObjectId }),
+    ]);
+
     return project;
 }
