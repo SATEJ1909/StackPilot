@@ -1,0 +1,308 @@
+{
+  "communities": {
+    "0": [
+      "apps_api_src_features_error_group_error_model_ts",
+      "apps_api_src_features_error_group_error_service_ts",
+      "apps_api_src_features_logs_logs_controller_ts",
+      "apps_api_src_features_logs_logs_model_ts",
+      "apps_api_src_features_logs_logs_service_ts",
+      "apps_api_src_features_project_project_service_ts",
+      "error_group_error_model_errorgroupschema",
+      "error_group_error_model_errormodel",
+      "logs_logs_controller_processloghandler",
+      "logs_logs_model_logmodel",
+      "logs_logs_model_logschema",
+      "logs_logs_service_parsetimestamp",
+      "logs_logs_service_processlog",
+      "logs_logs_service_runbackgroundanalysis",
+      "project_project_model_projectmodel",
+      "project_project_model_projectschema"
+    ],
+    "1": [
+      "app_page_feature",
+      "app_page_home",
+      "app_page_metric",
+      "apps_web_app_page_tsx",
+      "callback_page_authcallbackcontent",
+      "callback_page_authcallbackpage",
+      "callback_page_callbackshell",
+      "callback_page_callbackstate",
+      "callback_page_getcopy",
+      "callback_page_spinner",
+      "callback_page_warningicon",
+      "dashboard_page_dashboardpage",
+      "dashboard_page_getsdksnippet",
+      "dashboard_page_rendererrors",
+      "dashboard_page_severityclassname",
+      "id_page_loadstate"
+    ],
+    "2": [
+      "apps_api_src_features_project_project_controller_ts",
+      "apps_api_src_middleware_protect_ts",
+      "lib_auth_isauthenticated",
+      "project_project_controller_createprojecthandler",
+      "project_project_controller_deleteprojectbyidhandler",
+      "project_project_controller_getprojectbyidhandler",
+      "project_project_controller_getprojectshandler",
+      "project_project_controller_isvalidprojectname",
+      "project_project_controller_isvalidurl",
+      "project_project_controller_normalizepositiveint",
+      "project_project_routes_projectrouter",
+      "project_project_service_deleteprojectbyid",
+      "project_project_service_getprojectbyid",
+      "project_project_service_getprojects",
+      "project_project_service_toobjectid"
+    ],
+    "3": [
+      "apps_api_src_ovvrride_d_ts",
+      "apps_web_lib_api_ts",
+      "lib_api_apienvelope",
+      "lib_api_createproject",
+      "lib_api_deleteproject",
+      "lib_api_errorgroup",
+      "lib_api_fetcherrorgroups",
+      "lib_api_fetchproject",
+      "lib_api_project",
+      "lib_api_projectlist",
+      "lib_api_request",
+      "lib_auth_cleartoken",
+      "project_project_service_generateprojectkey"
+    ],
+    "4": [
+      "apps_api_src_features_error_group_ai_service_ts",
+      "apps_api_src_features_error_group_error_controller_ts",
+      "apps_api_src_features_error_group_error_routes_ts",
+      "error_group_ai_service_analyzeerror",
+      "error_group_ai_service_isvalidresponse",
+      "error_group_ai_service_models",
+      "error_group_ai_service_parsemodelresponse",
+      "error_group_error_controller_analyzeerrorhandler",
+      "error_group_error_controller_geterrorgroupshandler",
+      "error_group_error_routes_errorrouter",
+      "error_group_error_service_geterrorgroups"
+    ],
+    "5": [
+      "sdk_index_errorpayload",
+      "sdk_index_getroute",
+      "sdk_index_initlogger",
+      "sdk_index_logerror",
+      "sdk_index_loggerconfig",
+      "sdk_index_resetlogger",
+      "sdk_index_sendlog",
+      "sdk_index_ts",
+      "src_index_app",
+      "src_index_main",
+      "src_index_validateenvironment"
+    ],
+    "6": [
+      "apps_api_src_features_auth_auth_model_ts",
+      "apps_api_src_features_auth_auth_service_ts",
+      "auth_auth_model_authprovider",
+      "auth_auth_model_authproviderschema",
+      "auth_auth_model_usermodel",
+      "auth_auth_model_userschema",
+      "auth_auth_service_createoauthstate",
+      "auth_auth_service_encrypttoken",
+      "auth_auth_service_getgithubauthurl",
+      "auth_auth_service_handlegithubcallback"
+    ],
+    "7": [
+      "apps_api_src_features_logs_logs_routes_ts",
+      "apps_api_src_middleware_ratelimit_ts",
+      "logs_logs_routes_logratelimiter",
+      "logs_logs_routes_logsrouter",
+      "middleware_ratelimit_buckets",
+      "middleware_ratelimit_createratelimiter",
+      "middleware_ratelimit_now",
+      "middleware_ratelimit_ratelimitentry",
+      "middleware_ratelimit_ratelimitoptions"
+    ],
+    "8": [
+      "apps_web_lib_auth_ts",
+      "components_auth_actions_authactions",
+      "components_auth_actions_dashboardicon",
+      "components_auth_actions_githubicon",
+      "id_page_projectdetailpage",
+      "lib_auth_gettoken",
+      "lib_auth_settoken",
+      "lib_auth_subscribetotoken",
+      "lib_auth_useauthtoken"
+    ],
+    "9": [
+      "apps_api_src_features_auth_auth_controller_ts",
+      "apps_api_src_features_auth_auth_routes_ts",
+      "auth_auth_controller_getcookie",
+      "auth_auth_controller_githubauth",
+      "auth_auth_controller_githubcallback",
+      "auth_auth_routes_authrouter"
+    ],
+    "10": [
+      "apps_web_lib_config_ts",
+      "apps_web_postcss_config_mjs",
+      "eslint_config_next_nextjsconfig",
+      "packages_eslint_config_base_js",
+      "packages_eslint_config_next_js",
+      "packages_eslint_config_react_internal_js"
+    ],
+    "11": [
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "apps_web_app_layout_tsx"
+    ],
+    "12": [
+      "packages_ui_src_button_tsx",
+      "src_button_button",
+      "src_button_buttonprops"
+    ],
+    "13": [
+      "packages_ui_src_card_tsx",
+      "src_card_card"
+    ],
+    "14": [
+      "packages_ui_src_code_tsx",
+      "src_code_code"
+    ],
+    "15": [
+      "apps_web_eslint_config_mjs"
+    ],
+    "16": [
+      "apps_web_next_env_d_ts"
+    ],
+    "17": [
+      "apps_web_next_config_ts"
+    ]
+  },
+  "cohesion": {
+    "0": 0.23,
+    "1": 0.15,
+    "2": 0.26,
+    "3": 0.21,
+    "4": 0.31,
+    "5": 0.24,
+    "6": 0.27,
+    "7": 0.25,
+    "8": 0.25,
+    "9": 0.53,
+    "10": 0.47,
+    "11": 0.67,
+    "12": 0.67,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0
+  },
+  "gods": [
+    {
+      "id": "project_project_routes_projectrouter",
+      "label": "ProjectRouter",
+      "degree": 8
+    },
+    {
+      "id": "error_group_ai_service_analyzeerror",
+      "label": "analyzeError()",
+      "degree": 7
+    },
+    {
+      "id": "project_project_service_toobjectid",
+      "label": "toObjectId()",
+      "degree": 7
+    },
+    {
+      "id": "lib_api_request",
+      "label": "request()",
+      "degree": 7
+    },
+    {
+      "id": "lib_api_createproject",
+      "label": "createProject()",
+      "degree": 7
+    },
+    {
+      "id": "components_auth_actions_authactions",
+      "label": "AuthActions()",
+      "degree": 6
+    },
+    {
+      "id": "logs_logs_service_processlog",
+      "label": "processLog()",
+      "degree": 5
+    },
+    {
+      "id": "lib_auth_isauthenticated",
+      "label": "isAuthenticated()",
+      "degree": 5
+    },
+    {
+      "id": "lib_auth_useauthtoken",
+      "label": "useAuthToken()",
+      "degree": 5
+    },
+    {
+      "id": "error_group_error_model_errormodel",
+      "label": "ErrorModel",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "runBackgroundAnalysis()",
+      "target": "analyzeError()",
+      "source_files": [
+        "apps/api/src/features/logs/logs.service.ts",
+        "apps/api/src/features/error-group/ai.service.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "getErrorGroups()",
+      "target": "toObjectId()",
+      "source_files": [
+        "apps/api/src/features/error-group/error.service.ts",
+        "apps/api/src/features/project/project.service.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "createProject()",
+      "target": "GenerateProjectKey()",
+      "source_files": [
+        "apps/web/lib/api.ts",
+        "apps/api/src/features/project/project.service.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `GenerateProjectKey()` unexpectedly reaches hub `createProject()`"
+    },
+    {
+      "source": "createProject()",
+      "target": "toObjectId()",
+      "source_files": [
+        "apps/web/lib/api.ts",
+        "apps/api/src/features/project/project.service.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "DashboardPage()",
+      "target": "useAuthToken()",
+      "source_files": [
+        "apps/web/app/dashboard/page.tsx",
+        "apps/web/lib/auth.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
