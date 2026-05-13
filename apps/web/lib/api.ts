@@ -119,6 +119,7 @@ export const fetchErrorGroups = (projectId: string) => {
 };
 
 export const analyzeError = (data: {
+  errorGroupId: string;
   message: string;
   stack?: string;
   route?: string;
@@ -127,4 +128,26 @@ export const analyzeError = (data: {
     method: "POST",
     body: JSON.stringify(data),
   });
+};
+
+export const fetchErrorGroup = (projectId: string, errorId: string) => {
+  return request<ErrorGroup>(
+    `/error/${encodeURIComponent(errorId)}?projectId=${encodeURIComponent(projectId)}`
+  );
+};
+
+export type LogEntry = {
+  _id: string;
+  projectId: string;
+  errorGroupId: string;
+  message: string;
+  stack?: string;
+  route?: string;
+  timestamp: string;
+};
+
+export const fetchLogs = (projectId: string, errorGroupId: string) => {
+  return request<{ logs: LogEntry[] }>(
+    `/logs/${encodeURIComponent(errorGroupId)}?projectId=${encodeURIComponent(projectId)}`
+  );
 };

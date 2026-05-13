@@ -155,3 +155,14 @@ async function runBackgroundAnalysis(errorGroupId: any, data: any) {
         });
     }
 }
+
+export const getLogsByErrorGroup = async (projectId: string, errorGroupId: string) => {
+    return LogModel.find({
+        projectId: projectId,
+        errorGroupId: errorGroupId
+    })
+        .select("message stack route timestamp")
+        .sort({ timestamp: -1 })
+        .limit(100)
+        .lean();
+}

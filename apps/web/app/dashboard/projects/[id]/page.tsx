@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import {
-  analyzeError,
   ErrorGroup,
   fetchErrorGroups,
   fetchProject,
@@ -27,7 +26,6 @@ export default function ProjectDetailPage() {
   const [errors, setErrors] = useState<ErrorGroup[]>([]);
   const [state, setState] = useState<LoadState>("loading");
   const [notice, setNotice] = useState("");
-  const [analyzingId, setAnalyzingId] = useState<string | null>(null);
 
   const snippet = useMemo(() => {
     if (!project) return "";
@@ -89,27 +87,7 @@ initLogger({
     return () => window.clearInterval(interval);
   }, [projectId, token]);
 
-  const handleAnalyzeError = async (errorGroup: ErrorGroup) => {
-    setAnalyzingId(errorGroup._id);
-    try {
-      const result = await analyzeError({
-        message: errorGroup.message,
-        route: errorGroup.route,
-      });
-      setErrors((current) =>
-        current.map((e) =>
-          e._id === errorGroup._id
-            ? { ...e, ...result, aiAnalyzed: "done" as const }
-            : e
-        )
-      );
-      setNotice("AI analysis complete.");
-    } catch (error) {
-      setNotice(error instanceof Error ? error.message : "Analysis failed");
-    } finally {
-      setAnalyzingId(null);
-    }
-  };
+
 
   const copyText = async (value: string, label: string) => {
     try {
@@ -247,42 +225,15 @@ initLogger({
                           {error.route || "Route not provided"} - {error.count} event{error.count === 1 ? "" : "s"}
                         </p>
                       </div>
-                      <div className="flex items-center gap-2">
-                        {error.aiAnalyzed !== "done" && (
-                          <button
-                            type="button"
-                            disabled={analyzingId === error._id}
-                            onClick={() => handleAnalyzeError(error)}
-                            className="inline-flex h-9 items-center gap-2 rounded-md border border-[#d8dde5] bg-white px-3 text-xs font-semibold text-[#303741] transition hover:bg-[#f7f8fa] disabled:cursor-not-allowed disabled:opacity-60"
-                          >
-                            {analyzingId === error._id ? (
-                              <>
-                                <svg className="h-3.5 w-3.5 animate-spin" fill="none" viewBox="0 0 24 24">
-                                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                  <path className="opacity-75" d="M4 12a8 8 0 0 1 8-8" stroke="currentColor" strokeLinecap="round" strokeWidth="4" />
-                                </svg>
-                                Analyzing...
-                              </>
-                            ) : (
-                              "Analyze"
-                            )}
-                          </button>
-                        )}
-                        <span className="rounded-md bg-[#f2f4f7] px-2 py-1 text-xs font-semibold text-[#475467]">
-                          {error.aiAnalyzed}
-                        </span>
+                      <div className="flex items-center gap-2 mt-4 lg:mt-0">
+                        <Link
+                          href={`/dashboard/projects/${projectId}/errors/${error._id}`}
+                          className="inline-flex h-9 items-center gap-2 rounded-md border border-[#d8dde5] bg-white px-3 text-xs font-semibold text-[#303741] transition hover:bg-[#f7f8fa]"
+                        >
+                          View Analysis
+                        </Link>
                       </div>
                     </div>
-                    {error.cause && (
-                      <p className="mt-3 text-sm leading-6 text-[#303741]">{error.cause}</p>
-                    )}
-                    {error.fix?.length ? (
-                      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-[#475467]">
-                        {error.fix.map((fix) => (
-                          <li key={fix}>{fix}</li>
-                        ))}
-                      </ul>
-                    ) : null}
                   </article>
                 ))}
               </div>

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import { AuthActions } from "./components/auth-actions";
@@ -139,4 +137,3 @@ function Feature({
     </article>
   );
 }
->>>>>>> dev

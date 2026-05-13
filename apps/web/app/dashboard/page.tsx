@@ -208,6 +208,7 @@ export default function DashboardPage() {
     setAnalyzingId(errorGroup._id);
     try {
       const result = await analyzeError({
+        errorGroupId: errorGroup._id,
         message: errorGroup.message,
         route: errorGroup.route,
       });

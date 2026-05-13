@@ -1,6 +1,8 @@
-import { processLogHandler } from "./logs.controller.js";
+import { processLogHandler, getLogsHandler } from "./logs.controller.js";
 import Router from "express";
 import { createRateLimiter } from "../../middleware/rateLimit.js";
+import { isAuthenticated } from "../../middleware/protect.js";
+
 const LogsRouter = Router();
 
 const logRateLimiter = createRateLimiter({
@@ -13,5 +15,6 @@ const logRateLimiter = createRateLimiter({
 });
 
 LogsRouter.post("/" , logRateLimiter , processLogHandler);
+LogsRouter.get("/:errorGroupId", isAuthenticated, getLogsHandler);
 
 export default LogsRouter ;
