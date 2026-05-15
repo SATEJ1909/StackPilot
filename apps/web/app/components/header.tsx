@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { clearToken, useAuthToken } from "@/lib/auth";
+import { LayoutDashboard, LogOut } from "lucide-react";
 
 interface HeaderProps {
   showSignOut?: boolean;
@@ -13,7 +14,7 @@ export function Header({ showSignOut = false, showDashboard = false }: HeaderPro
   const signedIn = Boolean(token);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[#e1e5eb] bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 glass">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
           href="/"
@@ -29,8 +30,9 @@ export function Header({ showSignOut = false, showDashboard = false }: HeaderPro
           {showDashboard && (
             <Link
               href="/dashboard"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-[#d8dde5] bg-white px-4 text-sm font-semibold text-[#303741] transition hover:border-[#b8c0cc] hover:text-[#15171a]"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-[var(--sp-border-input)] bg-white px-4 text-sm font-semibold text-[var(--sp-text-label)] transition-all duration-200 hover:border-[var(--sp-border)] hover:bg-gray-50 hover:text-[var(--sp-text)] hover:scale-[1.02] active:scale-[0.98]"
             >
+              <LayoutDashboard className="h-4 w-4" />
               Dashboard
             </Link>
           )}
@@ -42,8 +44,9 @@ export function Header({ showSignOut = false, showDashboard = false }: HeaderPro
                 clearToken();
                 window.location.replace("/");
               }}
-              className="h-10 rounded-md border border-[#d8dde5] bg-white px-3 text-sm font-semibold transition hover:border-[#b8c0cc]"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-[var(--sp-border-input)] bg-white px-4 text-sm font-semibold text-[var(--sp-text-label)] transition-all duration-200 hover:border-[var(--sp-border)] hover:bg-red-50 hover:text-red-600 hover:scale-[1.02] active:scale-[0.98]"
             >
+              <LogOut className="h-4 w-4" />
               Sign out
             </button>
           )}

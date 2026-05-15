@@ -41,7 +41,7 @@ export function SkeletonText({
 export function SkeletonCard({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`rounded-lg border border-[#e1e5eb] bg-white p-6 ${className}`}
+      className={`rounded-2xl border border-[var(--sp-border)] glass-card p-6 ${className}`}
       aria-hidden="true"
     >
       <Skeleton width="40%" height="12px" className="mb-4" />

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import useSWR from "swr";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   analyzeError,
@@ -18,6 +20,7 @@ import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import { MetricCard } from "@/app/components/metric-card";
 import { SkeletonCard, SkeletonErrorRow, SkeletonProjectItem } from "@/app/components/skeleton";
+import { Plus, Search, Trash2, RefreshCw, Folder, Cpu, Copy, AlertTriangle } from "lucide-react";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -25,11 +28,8 @@ export default function DashboardPage() {
   const token = useAuthToken();
   const signedIn = Boolean(token);
   const [ready, setReady] = useState(false);
-  const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
-  const [errors, setErrors] = useState<ErrorGroup[]>([]);
-  const [projectState, setProjectState] = useState<LoadState>("idle");
-  const [errorState, setErrorState] = useState<LoadState>("idle");
+  
   const [notice, setNotice] = useState("");
   const [copyNotice, setCopyNotice] = useState("");
   const [form, setForm] = useState({ name: "", repoUrl: "" });
@@ -38,13 +38,45 @@ export default function DashboardPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [analyzingId, setAnalyzingId] = useState<string | null>(null);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => setReady(true));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
+  useEffect(() => {
+    if (ready && !signedIn) window.location.replace("/");
+  }, [ready, signedIn]);
+
+  // --- SWR Data Fetching ---
+  const { data: projectData, error: projectError, mutate: mutateProjects } = useSWR(
+    ready && signedIn ? ["projects", page] : null,
+    ([_, p]) => fetchProjects(p)
+  );
+
+  const projects = projectData?.projects || [];
+  const totalPages = projectData?.totalPages || 1;
+  const projectState = !projectData && !projectError ? "loading" : projectError ? "error" : "ready";
+
+  useEffect(() => {
+    // Auto-select first project if none selected
+    if (projects.length > 0 && !selectedProjectId) {
+      setSelectedProjectId(projects[0]._id);
+    }
+  }, [projects, selectedProjectId]);
+
+  const { data: errorData, error: errorsError, mutate: mutateErrors } = useSWR(
+    selectedProjectId ? ["errorGroups", selectedProjectId] : null,
+    ([_, id]) => fetchErrorGroups(id),
+    { refreshInterval: 15000 }
+  );
+
+  const visibleErrors = errorData?.errors || [];
+  const visibleErrorState = !errorData && !errorsError ? "loading" : errorsError ? "error" : "ready";
 
   const selectedProject = useMemo(() => {
     return projects.find((project) => project._id === selectedProjectId) ?? null;
   }, [projects, selectedProjectId]);
-  const visibleErrors = selectedProject ? errors : [];
-  const visibleErrorState = selectedProject ? errorState : "idle";
 
   const filteredErrors = useMemo(() => {
     if (!searchQuery.trim()) return visibleErrors;
@@ -74,90 +106,6 @@ export default function DashboardPage() {
   }, [selectedProject]);
 
   useEffect(() => {
-    const frame = window.requestAnimationFrame(() => setReady(true));
-    return () => window.cancelAnimationFrame(frame);
-  }, []);
-
-  useEffect(() => {
-    if (ready && !signedIn) window.location.replace("/");
-  }, [ready, signedIn]);
-
-  useEffect(() => {
-    if (!ready || !signedIn) return;
-    let cancelled = false;
-
-    const loadProjects = async () => {
-      setProjectState("loading");
-      setNotice("");
-      try {
-        const result = await fetchProjects(page);
-        if (cancelled) return;
-        setProjects(result.projects);
-        setTotalPages(result.totalPages);
-        setSelectedProjectId((current) => {
-          if (current && result.projects.some((p) => p._id === current)) return current;
-          return result.projects[0]?._id ?? null;
-        });
-        setProjectState("ready");
-      } catch (error) {
-        if (!cancelled) {
-          setProjectState("error");
-          setNotice(error instanceof Error ? error.message : "Failed to load projects");
-        }
-      }
-    };
-
-    loadProjects();
-    return () => { cancelled = true; };
-  }, [ready, signedIn, page]);
-
-  const loadErrors = useCallback(async (projectId: string, quiet = false) => {
-    if (!quiet) setErrorState("loading");
-    try {
-      const result = await fetchErrorGroups(projectId);
-      setErrors(result.errors);
-      setErrorState("ready");
-    } catch (error) {
-      setErrors([]);
-      setErrorState("error");
-      setNotice(error instanceof Error ? error.message : "Failed to load errors");
-    }
-  }, []);
-
-  useEffect(() => {
-    const projectId = selectedProjectId;
-    if (!projectId) return;
-    let cancelled = false;
-
-    const loadSelectedErrors = async () => {
-      setErrorState("loading");
-      try {
-        const result = await fetchErrorGroups(projectId);
-        if (!cancelled) {
-          setErrors(result.errors);
-          setErrorState("ready");
-        }
-      } catch (error) {
-        if (!cancelled) {
-          setErrors([]);
-          setErrorState("error");
-          setNotice(error instanceof Error ? error.message : "Failed to load errors");
-        }
-      }
-    };
-
-    loadSelectedErrors();
-    return () => { cancelled = true; };
-  }, [selectedProjectId]);
-
-  useEffect(() => {
-    const projectId = selectedProjectId;
-    if (!projectId) return;
-    const interval = window.setInterval(() => loadErrors(projectId, true), 15_000);
-    return () => window.clearInterval(interval);
-  }, [loadErrors, selectedProjectId]);
-
-  useEffect(() => {
     if (!copyNotice) return;
     const timeout = window.setTimeout(() => setCopyNotice(""), 2_000);
     return () => window.clearTimeout(timeout);
@@ -175,7 +123,7 @@ export default function DashboardPage() {
     setNotice("");
     try {
       const project = await createProject({ name: form.name, repoUrl: form.repoUrl });
-      setProjects((current) => [project, ...current]);
+      await mutateProjects();
       setSelectedProjectId(project._id);
       setForm({ name: "", repoUrl: "" });
       setNotice("Project created. Use the setup snippet to start sending logs.");
@@ -191,11 +139,7 @@ export default function DashboardPage() {
     setNotice("");
     try {
       await deleteProject(projectId);
-      setProjects((current) => {
-        const remaining = current.filter((p) => p._id !== projectId);
-        setSelectedProjectId(remaining[0]?._id ?? null);
-        return remaining;
-      });
+      await mutateProjects();
       setNotice("Project deleted.");
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "Failed to delete project");
@@ -207,18 +151,12 @@ export default function DashboardPage() {
   const handleAnalyzeError = async (errorGroup: ErrorGroup) => {
     setAnalyzingId(errorGroup._id);
     try {
-      const result = await analyzeError({
+      await analyzeError({
         errorGroupId: errorGroup._id,
         message: errorGroup.message,
         route: errorGroup.route,
       });
-      setErrors((current) =>
-        current.map((e) =>
-          e._id === errorGroup._id
-            ? { ...e, ...result, aiAnalyzed: "done" as const }
-            : e
-        )
-      );
+      await mutateErrors();
       setNotice("AI analysis complete.");
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "Analysis failed");
@@ -251,17 +189,20 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f6f7f9] text-[#15171a]">
+    <div className="flex min-h-screen flex-col bg-[var(--sp-bg)] text-[var(--sp-text)]">
       <Header showSignOut />
 
       <main className="flex-1">
         <section className="mx-auto grid max-w-7xl gap-6 px-6 py-8 lg:grid-cols-[340px_1fr]">
           {/* Sidebar */}
-          <aside className="space-y-4 animate-fade-in">
+          <aside className="space-y-4">
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
             {/* New project form */}
-            <form onSubmit={handleCreateProject} className="rounded-lg border border-[#d9dee7] bg-white p-5 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#667085]">New project</p>
-              <div className="mt-4 space-y-3">
+            <form onSubmit={handleCreateProject} className="rounded-2xl border border-[var(--sp-border)] glass-card p-5 mb-4">
+              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--sp-text-muted)]">
+                <Plus className="h-4 w-4" /> New project
+              </p>
+              <div className="mt-4 space-y-4">
                 <label className="block">
                   <span className="text-sm font-medium">Name</span>
                   <input
@@ -288,29 +229,26 @@ export default function DashboardPage() {
               <button
                 type="submit"
                 disabled={saving}
-                className="mt-4 h-10 w-full rounded-md bg-[#15171a] px-4 text-sm font-semibold text-white transition hover:bg-[#2b2f35] disabled:cursor-not-allowed disabled:bg-[#9aa3af]"
+                className="mt-5 h-10 w-full rounded-xl bg-[var(--sp-accent)] px-4 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[var(--sp-accent-hover)] hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {saving ? "Creating..." : "Create project"}
               </button>
             </form>
 
             {/* Search */}
-            <div className="relative">
-              <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#667085]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
+            <div className="relative mb-4">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search projects & errors..."
-                className="h-10 w-full rounded-md border border-[#d8dde5] bg-white pl-10 pr-3 text-sm outline-none transition focus:border-[#15171a] focus:ring-1 focus:ring-[#15171a]"
+                className="h-10 w-full rounded-xl border border-[var(--sp-border-input)] bg-white/50 backdrop-blur pl-10 pr-3 text-sm outline-none transition-all focus:border-[var(--sp-info)] focus:ring-2 focus:ring-[var(--sp-info-bg)]"
               />
             </div>
 
             {/* Project list */}
-            <div className="rounded-lg border border-[#d9dee7] bg-white p-3 shadow-sm">
+            <div className="rounded-2xl border border-[var(--sp-border)] glass-card p-2">
               <div className="flex items-center justify-between px-2 py-2">
                 <p className="text-sm font-semibold">Projects</p>
                 <span className="text-xs font-medium text-[#667085]">{filteredProjects.length}</span>
@@ -370,30 +308,40 @@ export default function DashboardPage() {
                 </div>
               )}
             </div>
+            </motion.div>
           </aside>
 
           {/* Main content */}
-          <section className="space-y-6 animate-slide-up">
+          <section className="space-y-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedProjectId || "empty"}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.4, type: "spring", bounce: 0 }}
+                className="space-y-6"
+              >
             {notice && (
-              <div className="rounded-lg border border-[#d9dee7] bg-white px-4 py-3 text-sm text-[#475467] animate-fade-in">
+              <div className="rounded-xl border border-[var(--sp-border-subtle)] bg-white px-4 py-3 text-sm text-[var(--sp-text-secondary)] shadow-sm">
                 {notice}
               </div>
             )}
             {copyNotice && (
-              <div className="rounded-lg border border-[#bbd7c6] bg-[#f0fdf4] px-4 py-3 text-sm font-medium text-[#027a48] animate-fade-in">
+              <div className="rounded-xl border border-[var(--sp-success-bg)] bg-[var(--sp-success-bg)] px-4 py-3 text-sm font-medium text-[var(--sp-success)]">
                 {copyNotice}
               </div>
             )}
 
             {/* Dashboard header */}
-            <div className="rounded-lg border border-[#d9dee7] bg-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-[var(--sp-border)] glass-card p-6">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#667085]">Dashboard</p>
-                  <h1 className="mt-3 text-3xl font-semibold tracking-tight">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sp-text-muted)]">Dashboard</p>
+                  <h1 className="mt-2 text-3xl font-bold tracking-tight text-[var(--sp-text)]">
                     {selectedProject ? selectedProject.name : "Set up your first project"}
                   </h1>
-                  <p className="mt-3 max-w-2xl text-sm leading-6 text-[#5f6b7a]">
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--sp-text-secondary)]">
                     {selectedProject
                       ? selectedProject.repoUrl
                       : "Create a project, install the logger, then watch grouped runtime failures appear here."}
@@ -403,26 +351,27 @@ export default function DashboardPage() {
                   <div className="flex flex-wrap gap-2">
                     <Link
                       href={`/dashboard/projects/${selectedProject._id}`}
-                      className="inline-flex h-10 items-center rounded-md border border-[#d8dde5] px-3 text-sm font-semibold text-[#303741] transition hover:bg-[#f7f8fa]"
+                      className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--sp-border-input)] bg-white px-4 text-sm font-semibold text-[var(--sp-text-label)] transition-all hover:bg-gray-50 hover:border-[var(--sp-border)] active:scale-[0.98]"
                     >
-                      Details
+                      <Folder className="h-4 w-4" /> Details
                     </Link>
-                    <button type="button" onClick={() => loadErrors(selectedProject._id)} className="h-10 rounded-md border border-[#d8dde5] px-3 text-sm font-semibold text-[#303741] transition hover:bg-[#f7f8fa]">
-                      Refresh
+                    <button type="button" onClick={() => mutateErrors()} className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--sp-border-input)] bg-white px-4 text-sm font-semibold text-[var(--sp-text-label)] transition-all hover:bg-gray-50 active:scale-[0.98]">
+                      <RefreshCw className="h-4 w-4" /> Refresh
                     </button>
                     <button
                       type="button"
                       disabled={deletingId === selectedProject._id}
                       onClick={() => handleDeleteProject(selectedProject._id)}
-                      className="h-10 rounded-md border border-[#f0b4b4] px-3 text-sm font-semibold text-[#b42318] transition hover:bg-[#fff5f5] disabled:cursor-not-allowed disabled:opacity-60"
+                      className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--sp-danger-bg)] bg-white px-4 text-sm font-semibold text-[var(--sp-danger)] transition-all hover:bg-[var(--sp-danger-bg)] disabled:cursor-not-allowed disabled:opacity-50"
                     >
+                      <Trash2 className="h-4 w-4" />
                       {deletingId === selectedProject._id ? "Deleting..." : "Delete"}
                     </button>
                   </div>
                 )}
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 <MetricCard label="Error groups" value={String(filteredErrors.length)} />
                 <MetricCard label="Total events" value={String(totalEvents)} />
                 <MetricCard label="Affected routes" value={String(activeRoutes.size)} />
@@ -431,35 +380,36 @@ export default function DashboardPage() {
 
             {/* SDK setup */}
             {selectedProject && (
-              <div className="rounded-lg border border-[#d9dee7] bg-white p-6 shadow-sm animate-fade-in">
+              <div className="rounded-2xl border border-[var(--sp-border)] glass-card p-6">
                 <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#667085]">Install</p>
-                    <h2 className="mt-2 text-xl font-semibold">SDK setup</h2>
-                    <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5f6b7a]">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--sp-text-muted)]">Install</p>
+                    <h2 className="mt-2 text-xl font-bold">SDK setup</h2>
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--sp-text-secondary)]">
                       Initialize the logger once in your client entry point. The backend groups repeated failures and runs AI analysis in the background.
                     </p>
                   </div>
                   <button
                     type="button"
                     onClick={() => copyText(selectedProject.projectKey, "Project key")}
-                    className="rounded-md border border-[#d8dde5] bg-[#f7f8fa] px-3 py-2 text-left font-mono text-xs text-[#303741] transition hover:border-[#b8c0cc]"
+                    className="group flex items-center gap-2 rounded-xl border border-[var(--sp-border-input)] bg-white px-3 py-2 text-left font-mono text-xs text-[var(--sp-text-label)] transition-all hover:border-[var(--sp-border)] hover:bg-gray-50 active:scale-[0.98]"
                   >
-                    {selectedProject.projectKey}
+                    <span className="text-gray-400">Key:</span> {selectedProject.projectKey}
+                    <Copy className="h-3 w-3 text-gray-400 group-hover:text-gray-600" />
                   </button>
                 </div>
-                <div className="mt-4 overflow-hidden rounded-md bg-[#111316]">
-                  <div className="flex items-center justify-between border-b border-white/10 px-4 py-2">
-                    <span className="text-xs font-semibold text-white/70">client setup</span>
+                <div className="mt-5 overflow-hidden rounded-xl bg-gray-900 shadow-inner">
+                  <div className="flex items-center justify-between border-b border-white/10 px-4 py-2 bg-gray-800">
+                    <span className="text-xs font-semibold text-gray-300">client setup</span>
                     <button
                       type="button"
                       onClick={() => copyText(getSdkSnippet(selectedProject), "SDK snippet")}
-                      className="rounded-md border border-white/15 px-2 py-1 text-xs font-semibold text-white transition hover:bg-white/10"
+                      className="rounded-md border border-white/15 px-3 py-1 text-xs font-semibold text-white transition hover:bg-white/10 active:scale-95"
                     >
                       Copy
                     </button>
                   </div>
-                  <pre className="overflow-x-auto p-4 text-sm leading-6 text-white">
+                  <pre className="overflow-x-auto p-4 text-sm leading-relaxed text-gray-100">
                     <code>{getSdkSnippet(selectedProject)}</code>
                   </pre>
                 </div>
@@ -467,12 +417,14 @@ export default function DashboardPage() {
             )}
 
             {/* Grouped errors */}
-            <div className="rounded-lg border border-[#d9dee7] bg-white shadow-sm">
-              <div className="border-b border-[#edf0f4] px-6 py-4">
-                <h2 className="text-xl font-semibold">Grouped errors</h2>
+            <div className="rounded-2xl border border-[var(--sp-border)] glass-card overflow-hidden">
+              <div className="border-b border-[var(--sp-border-subtle)] px-6 py-5 bg-gray-50/50">
+                <h2 className="text-lg font-bold">Grouped errors</h2>
               </div>
               {renderErrors(visibleErrorState, filteredErrors, analyzingId, handleAnalyzeError)}
             </div>
+              </motion.div>
+            </AnimatePresence>
           </section>
         </section>
       </main>
@@ -492,14 +444,14 @@ initLogger({
 }
 
 function renderErrors(
-  state: LoadState,
+  state: "loading" | "ready" | "error" | "idle",
   errors: ErrorGroup[],
   analyzingId: string | null,
   onAnalyze: (error: ErrorGroup) => void,
 ) {
-  if (state === "loading") {
+  if (state === "loading" || state === "idle") {
     return (
-      <div className="divide-y divide-[#edf0f4]">
+      <div className="divide-y divide-[var(--sp-border-subtle)]">
         <SkeletonErrorRow />
         <SkeletonErrorRow />
         <SkeletonErrorRow />
@@ -509,85 +461,88 @@ function renderErrors(
 
   if (state === "error") {
     return (
-      <p className="px-6 py-10 text-sm text-[#b42318]">
-        Failed to load grouped errors.
-      </p>
+      <div className="px-6 py-12 flex flex-col items-center justify-center text-center">
+        <AlertTriangle className="h-8 w-8 text-[var(--sp-danger)] mb-3" />
+        <p className="text-sm font-medium text-[var(--sp-danger)]">Failed to load grouped errors.</p>
+      </div>
     );
   }
 
   if (errors.length === 0) {
     return (
-      <p className="px-6 py-10 text-sm leading-6 text-[#667085]">
-        No errors captured yet. Send a log with the SDK snippet above and this panel will update after refresh.
-      </p>
+      <div className="px-6 py-16 flex flex-col items-center justify-center text-center">
+        <div className="h-16 w-16 rounded-full bg-gray-50 flex items-center justify-center mb-4">
+          <Cpu className="h-8 w-8 text-gray-300" />
+        </div>
+        <p className="text-sm font-medium text-[var(--sp-text-muted)] max-w-sm">
+          No errors captured yet. Send a log with the SDK snippet above and this panel will automatically update.
+        </p>
+      </div>
     );
   }
 
   return (
-    <div className="divide-y divide-[#edf0f4]">
+    <div className="divide-y divide-[var(--sp-border-subtle)] bg-white">
       {errors.map((error) => (
-        <article key={error._id} className="px-6 py-5 transition-colors hover:bg-[#fbfcfd]">
+        <article key={error._id} className="px-6 py-5 transition-colors hover:bg-gray-50/50">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
             <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
                 <span className={severityClassName(error.severity)}>
                   {error.severity}
                 </span>
-                <span className="rounded-md bg-[#eef4ff] px-2 py-1 text-xs font-semibold text-[#175cd3]">
+                <span className="flex items-center gap-1.5 rounded-md bg-[var(--sp-info-bg)] px-2.5 py-1 text-xs font-semibold text-[var(--sp-info)]">
+                  <Cpu className="h-3 w-3" />
                   {error.aiAnalyzed}
                 </span>
                 {error.type && (
-                  <span className="rounded-md bg-[#f2f4f7] px-2 py-1 text-xs font-semibold text-[#475467]">
+                  <span className="rounded-md bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-700">
                     {error.type}
                   </span>
                 )}
               </div>
-              <h3 className="mt-3 break-words text-base font-semibold">{error.message}</h3>
-              <p className="mt-2 text-sm text-[#667085]">
-                {error.route || "Route not provided"} - {error.count} event{error.count === 1 ? "" : "s"}
+              <h3 className="break-words text-base font-bold text-[var(--sp-text)]">{error.message}</h3>
+              <p className="mt-1.5 flex items-center gap-2 text-sm text-[var(--sp-text-secondary)]">
+                <span className="font-mono bg-gray-100 px-1.5 py-0.5 rounded text-xs">{error.route || "N/A"}</span>
+                &mdash;
+                <span>{error.count} event{error.count === 1 ? "" : "s"}</span>
               </p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-end gap-3 shrink-0">
+              <p className="text-xs font-medium text-gray-400">
+                {new Date(error.lastSeenAt).toLocaleString()}
+              </p>
               {error.aiAnalyzed !== "done" && (
                 <button
                   type="button"
                   disabled={analyzingId === error._id}
                   onClick={() => onAnalyze(error)}
-                  className="inline-flex h-9 items-center gap-2 rounded-md border border-[#d8dde5] bg-white px-3 text-xs font-semibold text-[#303741] transition hover:bg-[#f7f8fa] disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex h-9 items-center gap-2 rounded-lg border border-[var(--sp-border-input)] bg-white px-4 text-xs font-bold text-[var(--sp-text-label)] shadow-sm transition-all hover:bg-gray-50 hover:border-[var(--sp-border)] active:scale-95 disabled:opacity-50"
                 >
                   {analyzingId === error._id ? (
                     <>
-                      <svg className="h-3.5 w-3.5 animate-spin" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" d="M4 12a8 8 0 0 1 8-8" stroke="currentColor" strokeLinecap="round" strokeWidth="4" />
-                      </svg>
-                      Analyzing...
+                      <RefreshCw className="h-3.5 w-3.5 animate-spin" /> Analyzing...
                     </>
                   ) : (
                     <>
-                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M12 2a4 4 0 0 0-4 4c0 1.5.8 2.8 2 3.4V11h4V9.4A4 4 0 0 0 12 2Z" />
-                        <path d="M10 11v2a2 2 0 1 0 4 0v-2" />
-                        <path d="M8 15h8" />
-                        <path d="M9 18h6" />
-                      </svg>
-                      Analyze
+                      <Cpu className="h-3.5 w-3.5" /> Analyze
                     </>
                   )}
                 </button>
               )}
-              <p className="text-sm text-[#667085] whitespace-nowrap">
-                {new Date(error.lastSeenAt).toLocaleString()}
-              </p>
             </div>
           </div>
           {error.cause && (
-            <p className="mt-4 text-sm leading-6 text-[#303741]">{error.cause}</p>
+            <div className="mt-4 rounded-xl bg-[var(--sp-danger-bg)] p-3 border border-red-100">
+              <p className="text-sm font-medium text-[var(--sp-danger)]">{error.cause}</p>
+            </div>
           )}
           {error.fix?.length ? (
-            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-[#475467]">
+            <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-[var(--sp-success)]">
               {error.fix.map((fix) => (
-                <li key={fix}>{fix}</li>
+                <li key={fix}>
+                  <span className="text-[var(--sp-text-secondary)]">{fix}</span>
+                </li>
               ))}
             </ul>
           ) : null}
@@ -598,8 +553,8 @@ function renderErrors(
 }
 
 function severityClassName(severity: ErrorGroup["severity"]) {
-  const base = "rounded-md px-2 py-1 text-xs font-semibold";
-  if (severity === "high") return `${base} bg-[#fdecec] text-[#b42318]`;
-  if (severity === "medium") return `${base} bg-[#fff7e6] text-[#a15c07]`;
-  return `${base} bg-[#ecfdf3] text-[#027a48]`;
+  const base = "rounded-md px-2.5 py-1 text-xs font-bold uppercase tracking-wider";
+  if (severity === "high") return `${base} bg-[var(--sp-danger-bg)] text-[var(--sp-danger)]`;
+  if (severity === "medium") return `${base} bg-[var(--sp-warning-bg)] text-[var(--sp-warning)]`;
+  return `${base} bg-[var(--sp-success-bg)] text-[var(--sp-success)]`;
 }

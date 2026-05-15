@@ -2,28 +2,29 @@
 
 /* ── Design tokens ──────────────────────────────────────────── */
 :root {
-  --sp-bg: #f6f7f9;
+  --sp-bg: #f8fafc; /* Lighter, cooler background */
   --sp-surface: #ffffff;
-  --sp-border: #e1e5eb;
-  --sp-border-subtle: #edf0f4;
-  --sp-border-input: #d8dde5;
-  --sp-text: #15171a;
-  --sp-text-secondary: #5f6b7a;
-  --sp-text-muted: #667085;
-  --sp-text-label: #475467;
-  --sp-accent: #15171a;
-  --sp-accent-hover: #2b2f35;
-  --sp-danger: #b42318;
-  --sp-danger-bg: #fdecec;
-  --sp-success: #027a48;
-  --sp-success-bg: #ecfdf3;
-  --sp-warning: #a15c07;
-  --sp-warning-bg: #fff7e6;
-  --sp-info: #175cd3;
-  --sp-info-bg: #eef4ff;
-  --sp-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --sp-radius: 0.5rem;
-  --sp-radius-lg: 0.75rem;
+  --sp-border: #e2e8f0;
+  --sp-border-subtle: #f1f5f9;
+  --sp-border-input: #cbd5e1;
+  --sp-text: #0f172a;
+  --sp-text-secondary: #475569;
+  --sp-text-muted: #64748b;
+  --sp-text-label: #334155;
+  --sp-accent: #0f172a;
+  --sp-accent-hover: #1e293b;
+  --sp-danger: #ef4444;
+  --sp-danger-bg: #fef2f2;
+  --sp-success: #10b981;
+  --sp-success-bg: #ecfdf5;
+  --sp-warning: #f59e0b;
+  --sp-warning-bg: #fffbeb;
+  --sp-info: #3b82f6;
+  --sp-info-bg: #eff6ff;
+  --sp-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.025);
+  --sp-card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.025);
+  --sp-radius: 0.75rem;
+  --sp-radius-lg: 1rem;
 }
 
 @theme inline {
@@ -42,7 +43,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Keyframe animations ────────────────────────────────────── */
+/* ── Glassmorphism ────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--sp-border);
+  box-shadow: var(--sp-card-shadow);
+  transition: all 0.2s ease-in-out;
+}
+.glass-card:hover {
+  box-shadow: var(--sp-card-shadow-hover);
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
