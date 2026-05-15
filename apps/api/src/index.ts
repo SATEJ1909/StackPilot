@@ -1,14 +1,12 @@
+import "./env.js";
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-dotenv.config();
 import AuthRouter from "./features/auth/auth.routes.js";
 import ProjectRouter from "./features/project/project.routes.js";
 import LogsRouter from "./features/logs/logs.routes.js";
 import ErrorRouter from "./features/error-group/error.routes.js";
-
-
+import "./workers/log.worker.js";
 
 const app = express();
 

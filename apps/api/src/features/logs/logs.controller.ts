@@ -1,18 +1,24 @@
-import { processLog, getLogsByErrorGroup } from "./logs.service.js";
+import { getLogsByErrorGroup } from "./logs.service.js";
+import { logQueue } from "../../lib/queue.js";
 import type { RequestHandler } from "express";
-
 
 export const processLogHandler: RequestHandler = async (req, res) => {
     const data = req.body;
     try {
-        await processLog(data);
-        res.status(200).json({ success : true , message: "Log processed successfully" });
+        // Fast validation before queueing
+        if (!data.projectKey || typeof data.projectKey !== "string") {
+            res.status(400).json({ success: false, message: "Invalid projectKey" });
+            return;
+        }
+
+        // Push to BullMQ
+        await logQueue.add("processLog", data);
+        
+        // Respond immediately
+        res.status(200).json({ success : true , message: "Log queued successfully" });
     } catch (error: any) {
         console.log("error" , error);
-        const message = error instanceof Error ? error.message : "Failed to process log";
-        const status = message.startsWith("Invalid") || message.includes("required") ? 400 : 500;
-
-        res.status(status).json({ success : false , message });
+        res.status(500).json({ success : false , message: "Failed to queue log" });
     }
 };
 

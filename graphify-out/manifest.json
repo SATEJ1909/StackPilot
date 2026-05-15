@@ -1,163 +1,183 @@
 {
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\env.ts": {
+    "mtime": 1778819019.484531,
+    "hash": "4854451d4c7c3d183a1e25aa59349be4"
+  },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\index.ts": {
-    "mtime": 1778130539.142917,
-    "hash": "fc3982840badbfca2e4db454f8b2727b"
+    "mtime": 1778819028.9024577,
+    "hash": "a9c6509b099157a0c2faccec11081381"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\ovvrride.d.ts": {
-    "mtime": 1774595423.1419663,
+    "mtime": 1778473468.9467337,
     "hash": "c6a3e64ccab58f569b377186ab433139"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\auth\\auth.controller.ts": {
-    "mtime": 1778248739.0174632,
-    "hash": "f582d700bc6f4c2c18e34bc7190e5457"
+    "mtime": 1778473468.9181468,
+    "hash": "bf3b8b84295cb662a72ef61617d8f369"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\auth\\auth.model.ts": {
-    "mtime": 1778129105.7107904,
-    "hash": "20811a7a36ea57c4561760ddb22ed10a"
+    "mtime": 1778473468.920159,
+    "hash": "24a5044ffa9c37f530c53f3fc9d5179b"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\auth\\auth.routes.ts": {
-    "mtime": 1774521955.1726496,
+    "mtime": 1778473468.9211576,
     "hash": "3b01e5dad1f7531492dc7a830d095890"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\auth\\auth.service.ts": {
-    "mtime": 1778129486.7146592,
-    "hash": "05337195b086f265d34eea9669977b84"
+    "mtime": 1778473468.922587,
+    "hash": "73e671932c750facde47f031a8afa847"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\ai.service.ts": {
-    "mtime": 1778252727.1325116,
-    "hash": "3562c29834246258e9625e6243c410e8"
+    "mtime": 1778473468.9236572,
+    "hash": "aa675e0819e60bdc9ab3aa55660a4541"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\error.controller.ts": {
-    "mtime": 1778251037.6582308,
-    "hash": "a1720fe93f8240bcab2498ad762455f6"
+    "mtime": 1778642204.391051,
+    "hash": "d05de41d22e21fc6f27c7360621e1a5e"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\error.model.ts": {
-    "mtime": 1778129105.9851594,
-    "hash": "c452ac21b634fb7a26a50df8aa959d93"
+    "mtime": 1778473468.9260852,
+    "hash": "1fc34bd230e3a82072ae69424aba1d32"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\error.routes.ts": {
-    "mtime": 1778251038.039088,
-    "hash": "7bd0c683f4425fc6b516a6d52226d880"
+    "mtime": 1778640507.6146502,
+    "hash": "87db07b946cc65c0f92e39f525609030"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\error.service.ts": {
-    "mtime": 1778251036.8403723,
-    "hash": "84f07707aa53c92e1c6454500c72646c"
+    "mtime": 1778640450.4692013,
+    "hash": "e408968baca6d7e063d8e615854df186"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\logs\\logs.controller.ts": {
-    "mtime": 1778129500.2385557,
-    "hash": "5b16d3b4a22bfabe899c148298c770d0"
+    "mtime": 1778816353.8787043,
+    "hash": "565ec88c8efdf862f277babb662edd7a"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\logs\\logs.model.ts": {
-    "mtime": 1778129105.889269,
-    "hash": "f5d7a95a5cdae07cf1ad29b22119d662"
+    "mtime": 1778473468.9310822,
+    "hash": "7f1f4b2936a12271063cfaaef57748b7"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\logs\\logs.routes.ts": {
-    "mtime": 1778129476.139812,
-    "hash": "8af48ed86d844e0de797a8c87238b600"
+    "mtime": 1778640572.7175143,
+    "hash": "cc19b73056beaea9487a385395464285"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\logs\\logs.service.ts": {
-    "mtime": 1778132490.8621976,
-    "hash": "1f940d0bfa63fff47a7701f35d8f8397"
+    "mtime": 1778640527.8681574,
+    "hash": "c0c731192d621c8b0e0d1647b252f7a3"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\project\\project.controller.ts": {
-    "mtime": 1778130667.7812228,
-    "hash": "b35827389f719f192ff4c81456d83541"
+    "mtime": 1778473468.936181,
+    "hash": "a552bc251f6d39a046eef95077b418c6"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\project\\project.model.ts": {
-    "mtime": 1778129105.797273,
-    "hash": "b7593db596664fe9db37f39d82435c29"
+    "mtime": 1778473468.9377022,
+    "hash": "1c367eef2ef1839179b1b6b49881386d"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\project\\project.routes.ts": {
-    "mtime": 1778129214.2058775,
-    "hash": "0e946760547255fc72c417f10ae0ad62"
+    "mtime": 1778473468.9388876,
+    "hash": "c7749a735277e296c9f5eff81f4ce0ae"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\project\\project.service.ts": {
-    "mtime": 1778253000.460923,
-    "hash": "c2d2c6c636f3076953c28460f65dfe5d"
+    "mtime": 1778473468.939913,
+    "hash": "63dbfc12eed2525f8760e06b293abd3a"
+  },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\lib\\ioredis.ts": {
+    "mtime": 1778818804.8051536,
+    "hash": "8f3adbe2c4cd219bcc87a5fdb985dd14"
+  },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\lib\\queue.ts": {
+    "mtime": 1778816540.4730575,
+    "hash": "eec7196d8efac4d9ea87aacfbb660b4b"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\middleware\\protect.ts": {
-    "mtime": 1778129214.0219371,
-    "hash": "dd24de3d130a065a677bcadf2073a966"
+    "mtime": 1778473468.9431732,
+    "hash": "b537552aab4ad6332d2b50f367aca8dc"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\middleware\\rateLimit.ts": {
-    "mtime": 1778129518.5248508,
-    "hash": "33b477f55976644033e554762bfd30fe"
+    "mtime": 1778473468.944894,
+    "hash": "ba1cff027bfcbfd15bc7768e1b101673"
+  },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\workers\\log.worker.ts": {
+    "mtime": 1778816560.4585135,
+    "hash": "4e6f96b48251d604746c67554898bc08"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\eslint.config.mjs": {
-    "mtime": 1778151592.2974472,
-    "hash": "dfa1f5f6a7037bf39dc510f30b180002"
+    "mtime": 1778473468.973515,
+    "hash": "6c4307ffa009658f5c97f5629094c0c2"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\next-env.d.ts": {
-    "mtime": 1778252495.6745615,
-    "hash": "2a74d3909800ca5467fa83b0ab4a4890"
+    "mtime": 1778642510.7958279,
+    "hash": "d0f8375ae1199dc7acd3977fc33b78b8"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\next.config.ts": {
-    "mtime": 1778248798.1543844,
-    "hash": "154177f65fdb13f40bd06e8a890eacc6"
+    "mtime": 1778473468.9782753,
+    "hash": "0490f3be7bc4ebe8a833cde2a4ee55f6"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\postcss.config.mjs": {
-    "mtime": 1778151592.3092074,
-    "hash": "239f3ebf717465dc636818a1a619398d"
+    "mtime": 1778473468.986591,
+    "hash": "481fac0fdecd70e1821cc30b86030c1a"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\error.tsx": {
-    "mtime": 1778425309.2262957,
-    "hash": "1dbd12abc3e825c46583c9b9d3faeef0"
+    "mtime": 1778473468.9671955,
+    "hash": "95d9caa7898a1873789238e02c470b0e"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\layout.tsx": {
-    "mtime": 1778425243.99726,
+    "mtime": 1778593179.8011172,
     "hash": "d04d18d8e69a652df6a827cec6ce58c1"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\not-found.tsx": {
-    "mtime": 1778425307.187157,
-    "hash": "1e76fe351398518514d7f224d0154afe"
+    "mtime": 1778593196.392752,
+    "hash": "cd293db81458508394328d9c5e9e507a"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\page.tsx": {
-    "mtime": 1778425382.3323154,
-    "hash": "e255dd2b26cbd7be6421626c615de271"
+    "mtime": 1778593181.8723454,
+    "hash": "541797405562892bc902d0645c3ec168"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\auth\\callback\\page.tsx": {
-    "mtime": 1778252024.9401243,
-    "hash": "86c53f89b02df7805c924d6f32161452"
+    "mtime": 1778473468.9564626,
+    "hash": "8a87b4ac04f4730da6a841c29d952ca0"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\components\\auth-actions.tsx": {
-    "mtime": 1778252482.0405316,
-    "hash": "f4e75b22d97ff677bd226fbf7c653d2f"
+    "mtime": 1778473468.957644,
+    "hash": "ce29826be3b4f0cd824ee400764638ad"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\components\\footer.tsx": {
-    "mtime": 1778425268.3324199,
-    "hash": "196867a2de1e434397b175d942c9c458"
+    "mtime": 1778473468.9598134,
+    "hash": "641820dd50e40838bf7f6dec32287bcd"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\components\\header.tsx": {
-    "mtime": 1778425264.7991157,
-    "hash": "eea562d01623b0f5d670bd3ad410751b"
+    "mtime": 1778473468.9608119,
+    "hash": "32f72ecd64d3c277fbfd318b42f20269"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\components\\metric-card.tsx": {
-    "mtime": 1778425278.0458689,
-    "hash": "00bcef52886c09654a8ed763a1bd865f"
+    "mtime": 1778473468.9618118,
+    "hash": "7a16c0e82b4889d2f604917460f83c22"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\components\\skeleton.tsx": {
-    "mtime": 1778425280.2486799,
-    "hash": "12045cd58d48287a3c720f34290133f8"
+    "mtime": 1778473468.9628098,
+    "hash": "04c46811475f072a28222dab5856dc82"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\dashboard\\page.tsx": {
-    "mtime": 1778425578.8066971,
-    "hash": "9d7d1993a65e0bb566bb83e456dbdf08"
+    "mtime": 1778596438.5869117,
+    "hash": "ab4439a4c8b23d5eb89db6ab14b2716b"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\dashboard\\projects\\[id]\\page.tsx": {
-    "mtime": 1778425627.4978795,
-    "hash": "ba49f261abc22d2962d1512069864a7a"
+    "mtime": 1778640713.5470152,
+    "hash": "19f529adda435af5bbd4a4562bae3a8b"
+  },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\dashboard\\projects\\[id]\\errors\\[errorId]\\page.tsx": {
+    "mtime": 1778640626.2740695,
+    "hash": "73024c2da8c67869b800b0ee96371ebb"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\lib\\api.ts": {
-    "mtime": 1778425330.010254,
-    "hash": "b51be31a40e1a3c9150429e580bead98"
+    "mtime": 1778640593.2075825,
+    "hash": "4d350523fce1629c3561be686504c033"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\lib\\auth.ts": {
-    "mtime": 1778248797.2530613,
-    "hash": "f20f7738c55d1c5b0332368f7ae21ef5"
+    "mtime": 1778473468.9761105,
+    "hash": "31e9211a14b5350f7a965daed8862ac4"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\lib\\config.ts": {
-    "mtime": 1778248737.5302992,
-    "hash": "daae8fac1f69a80b2b7d2f7b8edd79db"
+    "mtime": 1778473468.9771883,
+    "hash": "aef78c7c3278c6139579df151eb84fe4"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\packages\\eslint-config\\base.js": {
     "mtime": 1774356295.0,
@@ -188,39 +208,39 @@
     "hash": "dd8ba0d572b4682c869f343cc7cad209"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\sdk\\index.ts": {
-    "mtime": 1778253076.754514,
-    "hash": "83750e540f8c66009e139601ed2e4de3"
+    "mtime": 1778473469.0905495,
+    "hash": "87b97f6e753d68048715b66914a44883"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\pnpm-workspace.yaml": {
-    "mtime": 1778149970.8285449,
-    "hash": "91de28b06b9fc85a392045bf9c327a74"
+    "mtime": 1778473469.0876646,
+    "hash": "06bd39bbd3da241322510cc89d8cfb53"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\README.md": {
     "mtime": 1774419401.2426755,
     "hash": "b121b12ba10149cae9ac8fc87688e6ec"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\AGENTS.md": {
-    "mtime": 1778151664.6333003,
-    "hash": "9e09241799026ac05be315a2f0b50055"
+    "mtime": 1778473468.9505155,
+    "hash": "9346a4897ff955555ddedb7bebf77adb"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\CLAUDE.md": {
-    "mtime": 1778151664.6343012,
-    "hash": "5c27369b226fcf2be8a6cfe52224e767"
+    "mtime": 1778473468.9517663,
+    "hash": "771faa62feb60b7de901a397aebb29b0"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\pnpm-workspace.yaml": {
-    "mtime": 1778151600.911151,
+    "mtime": 1778473468.9849494,
     "hash": "b6e0a9c1a7b488c11a1c5812b4ed319b"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\README.md": {
-    "mtime": 1778151592.2692497,
-    "hash": "f15aaa42d5d299d091b1171097ea56ad"
+    "mtime": 1778473468.9534605,
+    "hash": "9162add00befbcdb432430f405c4ad8d"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\packages\\eslint-config\\README.md": {
     "mtime": 1774356295.0,
     "hash": "3f4915336e7c54df90f5b12b527b8b87"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\sdk\\README.md": {
-    "mtime": 1778253076.8097339,
-    "hash": "9f23c4de83c862c79f1642d94894e737"
+    "mtime": 1778473469.0890353,
+    "hash": "472c403b8047b6ffd7121a81e703bf4f"
   }
 }
