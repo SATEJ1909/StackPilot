@@ -4,8 +4,8 @@
     "hash": "4854451d4c7c3d183a1e25aa59349be4"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\index.ts": {
-    "mtime": 1778819028.9024577,
-    "hash": "a9c6509b099157a0c2faccec11081381"
+    "mtime": 1778820528.9214911,
+    "hash": "c39b15809cf217de121fd8ee3e6a5038"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\ovvrride.d.ts": {
     "mtime": 1778473468.9467337,
@@ -28,8 +28,8 @@
     "hash": "73e671932c750facde47f031a8afa847"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\ai.service.ts": {
-    "mtime": 1778473468.9236572,
-    "hash": "aa675e0819e60bdc9ab3aa55660a4541"
+    "mtime": 1778820481.627551,
+    "hash": "c980bfce7b6c5cca42949673608fb6d4"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\error-group\\error.controller.ts": {
     "mtime": 1778642204.391051,
@@ -60,8 +60,8 @@
     "hash": "cc19b73056beaea9487a385395464285"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\logs\\logs.service.ts": {
-    "mtime": 1778640527.8681574,
-    "hash": "c0c731192d621c8b0e0d1647b252f7a3"
+    "mtime": 1778820554.2500997,
+    "hash": "c9a18dea626c0b228f1fe132b2a1328d"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\features\\project\\project.controller.ts": {
     "mtime": 1778473468.936181,
@@ -87,6 +87,10 @@
     "mtime": 1778816540.4730575,
     "hash": "eec7196d8efac4d9ea87aacfbb660b4b"
   },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\lib\\socket.ts": {
+    "mtime": 1778820514.6097333,
+    "hash": "1e96a0b7f072b28d0814d11c29688d15"
+  },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\middleware\\protect.ts": {
     "mtime": 1778473468.9431732,
     "hash": "b537552aab4ad6332d2b50f367aca8dc"
@@ -94,6 +98,10 @@
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\middleware\\rateLimit.ts": {
     "mtime": 1778473468.944894,
     "hash": "ba1cff027bfcbfd15bc7768e1b101673"
+  },
+  "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\middleware\\rateLimiter.ts": {
+    "mtime": 1778820430.5202217,
+    "hash": "e3da0176e954c167da207ac9b74d1445"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\api\\src\\workers\\log.worker.ts": {
     "mtime": 1778816560.4585135,
@@ -108,8 +116,8 @@
     "hash": "d0f8375ae1199dc7acd3977fc33b78b8"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\next.config.ts": {
-    "mtime": 1778473468.9782753,
-    "hash": "0490f3be7bc4ebe8a833cde2a4ee55f6"
+    "mtime": 1778819295.8129392,
+    "hash": "67d9a5c775daa692e49fb165e8aa5312"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\postcss.config.mjs": {
     "mtime": 1778473468.986591,
@@ -164,8 +172,8 @@
     "hash": "19f529adda435af5bbd4a4562bae3a8b"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\app\\dashboard\\projects\\[id]\\errors\\[errorId]\\page.tsx": {
-    "mtime": 1778640626.2740695,
-    "hash": "73024c2da8c67869b800b0ee96371ebb"
+    "mtime": 1778820619.817409,
+    "hash": "2582f81f5886d2a1bf2d9274d2248790"
   },
   "C:\\Users\\satej\\Desktop\\projects\\ai-copilot\\apps\\web\\lib\\api.ts": {
     "mtime": 1778640593.2075825,

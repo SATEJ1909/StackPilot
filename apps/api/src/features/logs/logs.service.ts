@@ -3,6 +3,8 @@ import { ErrorModel } from "../error-group/error.model.js";
 import { LogModel } from "./logs.model.js";
 import crypto from "crypto";
 import { analyzeError } from "../error-group/ai.service.js";
+import { emitAnalysisUpdate } from "../../lib/socket.js";
+
 export const processLog = async (data: any) => {
     const { projectKey, message, stack, route, timestamp } = data;
 
@@ -111,7 +113,7 @@ export const processLog = async (data: any) => {
 
     // Run AI analysis in background
     if (analysisLock) {
-        runBackgroundAnalysis(errorGroup._id, {
+        runBackgroundAnalysis(project._id.toString(), errorGroup._id.toString(), {
             message,
             stack,
             route
@@ -133,7 +135,7 @@ const parseTimestamp = (value: unknown) => {
 }
 
 // Internal helper for background task
-async function runBackgroundAnalysis(errorGroupId: any, data: any) {
+async function runBackgroundAnalysis(projectId: string, errorGroupId: string, data: any) {
     try {
         const aiData = await analyzeError(data);
 
@@ -145,6 +147,9 @@ async function runBackgroundAnalysis(errorGroupId: any, data: any) {
             severity: aiData.severity,
             aiAnalyzed: "done"
         });
+
+        // Emit real-time update to any frontend clients viewing this project
+        emitAnalysisUpdate(projectId, { errorGroupId, aiData });
 
     } catch (error) {
         console.error("AI Analysis failed:", errorGroupId);

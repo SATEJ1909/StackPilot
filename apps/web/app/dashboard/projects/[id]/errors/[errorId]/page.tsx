@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { io } from "socket.io-client";
 
 import {
   analyzeError,
@@ -46,6 +47,8 @@ export default function ErrorAnalysisPage() {
     }
     let cancelled = false;
 
+    const socket = io(process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000");
+
     const loadData = async () => {
       setState("loading");
       try {
@@ -59,6 +62,9 @@ export default function ErrorAnalysisPage() {
           setErrorGroup(errorGroupResult);
           setLogs(logsResult.logs);
           setState("ready");
+          
+          // Join socket room once we have the project
+          socket.emit("join_project", projectId);
         }
       } catch (error) {
         if (!cancelled) {
@@ -68,8 +74,26 @@ export default function ErrorAnalysisPage() {
       }
     };
 
+    socket.on("analysis_updated", (data: any) => {
+      if (data.errorGroupId === errorId) {
+        setErrorGroup((current) => current ? { 
+          ...current, 
+          type: data.aiData.type,
+          reasoning: data.aiData.reasoning,
+          cause: data.aiData.cause,
+          fix: data.aiData.fix,
+          severity: data.aiData.severity,
+          aiAnalyzed: "done" 
+        } : null);
+        setNotice("AI analysis completed via real-time update.");
+      }
+    });
+
     loadData();
-    return () => { cancelled = true; };
+    return () => { 
+      cancelled = true; 
+      socket.disconnect();
+    };
   }, [projectId, errorId, token]);
 
   const handleAnalyzeError = async () => {

@@ -1,4 +1,5 @@
-
+import crypto from "crypto";
+import { redisConnection } from "../../lib/ioredis.js";
 
 const MODELS = [
   "google/gemini-2.0-flash-001",      // Cutting edge, best at JSON
@@ -49,6 +50,21 @@ export const analyzeError = async (data: {
 }) => {
   const { message, stack, route } = data;
 
+  // Cache Logic
+  const cacheKeyInput = `route:${route || ""}|msg:${message}|stack:${stack || ""}`;
+  const cacheHash = crypto.createHash("sha256").update(cacheKeyInput).digest("hex");
+  const cacheKey = `ai-cache:${cacheHash}`;
+
+  try {
+    const cachedResponse = await redisConnection.get(cacheKey);
+    if (cachedResponse) {
+      console.log(`[AI Cache] Hit for ${cacheHash.substring(0, 8)}`);
+      return JSON.parse(cachedResponse);
+    }
+  } catch (err) {
+    console.error("[AI Cache] Error reading from Redis", err);
+  }
+
   for (const model of MODELS) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout per model
@@ -87,6 +103,12 @@ export const analyzeError = async (data: {
 
       const parsed = parseModelResponse(raw);
       if (isValidResponse(parsed)) {
+        try {
+          await redisConnection.setex(cacheKey, 7 * 24 * 60 * 60, JSON.stringify(parsed));
+          console.log(`[AI Cache] Saved for ${cacheHash.substring(0, 8)}`);
+        } catch (err) {
+          console.error("[AI Cache] Error writing to Redis", err);
+        }
         return parsed;
       }
     } catch (err) {

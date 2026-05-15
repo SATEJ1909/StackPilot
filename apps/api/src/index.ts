@@ -1,5 +1,6 @@
 import "./env.js";
 import express from "express";
+import http from "http";
 import cors from "cors";
 import mongoose from "mongoose";
 import AuthRouter from "./features/auth/auth.routes.js";
@@ -8,13 +9,21 @@ import LogsRouter from "./features/logs/logs.routes.js";
 import ErrorRouter from "./features/error-group/error.routes.js";
 import "./workers/log.worker.js";
 
+import { globalRateLimiter } from "./middleware/rateLimiter.js";
+import { initializeSocket } from "./lib/socket.js";
+
 const app = express();
+const server = http.createServer(app);
+initializeSocket(server);
 
 app.disable("x-powered-by");
 app.use(express.json());
 app.use(cors({
     origin: process.env.CORS_ORIGIN || true,
 }));
+
+// Apply global rate limiter
+app.use("/api", globalRateLimiter);
 app.use("/api/v1/auth", AuthRouter);
 app.use("/api/v1/project", ProjectRouter);
 app.use("/api/v1/logs", LogsRouter);
@@ -32,7 +41,7 @@ async function main(){
     }
 
     await mongoose.connect(mongoUri)
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 
 function validateEnvironment() {
