@@ -86,7 +86,13 @@ export const getProjectByIdHandler: RequestHandler = async (req, res) => {
     try {
         
         const projectId= req.params.id;
-        const project = await getProjectById(projectId as string, req.userId as string);
+
+        if (typeof projectId !== "string") {
+            res.status(400).json({ success: false, message: "projectId param is required" });
+            return;
+        }
+
+        const project = await getProjectById(projectId, req.userId as string);
 
         // 3. Service now handles the "not found" throw, so this catch works perfectly
         res.status(200).json({ success: true, data: project });
@@ -98,7 +104,13 @@ export const getProjectByIdHandler: RequestHandler = async (req, res) => {
 
 export const deleteProjectByIdHandler: RequestHandler = async (req, res) => {
     try {
-        const { id = '' } = req.params;
+        const id = req.params.id;
+
+        if (typeof id !== "string") {
+            res.status(400).json({ success: false, message: "projectId param is required" });
+            return;
+        }
+
         await deleteProjectById(id, req.userId as string);
         
         res.status(200).json({ success: true, message: "Project deleted successfully" });
