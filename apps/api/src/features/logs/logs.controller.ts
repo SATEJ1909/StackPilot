@@ -1,5 +1,6 @@
 import { getLogsByErrorGroup } from "./logs.service.js";
-import { logQueue } from "../../lib/queue.js";
+import { processLog } from "./logs.service.js";
+import { addLogJob } from "../../lib/queue.js";
 import type { RequestHandler } from "express";
 
 export const processLogHandler: RequestHandler = async (req, res) => {
@@ -11,11 +12,19 @@ export const processLogHandler: RequestHandler = async (req, res) => {
             return;
         }
 
-        // Push to BullMQ
-        await logQueue.add("processLog", data);
-        
-        // Respond immediately
-        res.status(200).json({ success : true , message: "Log queued successfully" });
+        const queued = await addLogJob(data);
+
+        if (queued) {
+            res.status(200).json({ success : true , message: "Log queued successfully" });
+            return;
+        }
+
+        processLog(data).catch((error) => {
+            const message = error instanceof Error ? error.message : "Failed to process log";
+            console.error(`[Logs] Background processing failed: ${message}`);
+        });
+
+        res.status(202).json({ success : true , message: "Log accepted for background processing" });
     } catch (error: any) {
         console.log("error" , error);
         res.status(500).json({ success : false , message: "Failed to queue log" });

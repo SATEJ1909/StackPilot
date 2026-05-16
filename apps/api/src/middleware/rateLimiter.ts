@@ -1,6 +1,15 @@
 import rateLimit from "express-rate-limit";
-import RedisStore from "rate-limit-redis";
-import { redisConnection } from "../lib/ioredis.js";
+import RedisStore, { type RedisReply } from "rate-limit-redis";
+import { rateLimitRedisConnection } from "../lib/ioredis.js";
+
+const createRedisStore = (prefix: string) =>
+  rateLimitRedisConnection
+    ? new RedisStore({
+        prefix,
+        sendCommand: (command: string, ...args: string[]) =>
+          rateLimitRedisConnection.call(command, ...args) as Promise<RedisReply>,
+      })
+    : undefined;
 
 // Global rate limiter for the API to prevent abuse
 export const globalRateLimiter = rateLimit({
@@ -8,10 +17,8 @@ export const globalRateLimiter = rateLimit({
   max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-  store: new RedisStore({
-    // @ts-expect-error - rate-limit-redis has some strict type definitions that don't always align with ioredis, but it works
-    sendCommand: (...args: string[]) => redisConnection.call(...args),
-  }),
+  store: createRedisStore("rl:global:"),
+  passOnStoreError: true,
   message: {
     error: "Too many requests from this IP, please try again after 15 minutes",
   },
@@ -23,10 +30,8 @@ export const aiAnalysisRateLimiter = rateLimit({
   max: 10, // Limit each IP to 10 analysis requests per minute
   standardHeaders: true,
   legacyHeaders: false,
-  store: new RedisStore({
-    // @ts-expect-error
-    sendCommand: (...args: string[]) => redisConnection.call(...args),
-  }),
+  store: createRedisStore("rl:ai-analysis:"),
+  passOnStoreError: true,
   message: {
     error: "AI analysis rate limit exceeded. Please wait a minute.",
   },

@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { redisConnection } from "../../lib/ioredis.js";
+import { redisGet, redisSetEx } from "../../lib/ioredis.js";
 
 const MODELS = [
   "google/gemini-2.0-flash-001",      // Cutting edge, best at JSON
@@ -56,7 +56,7 @@ export const analyzeError = async (data: {
   const cacheKey = `ai-cache:${cacheHash}`;
 
   try {
-    const cachedResponse = await redisConnection.get(cacheKey);
+    const cachedResponse = await redisGet(cacheKey);
     if (cachedResponse) {
       console.log(`[AI Cache] Hit for ${cacheHash.substring(0, 8)}`);
       return JSON.parse(cachedResponse);
@@ -104,8 +104,10 @@ export const analyzeError = async (data: {
       const parsed = parseModelResponse(raw);
       if (isValidResponse(parsed)) {
         try {
-          await redisConnection.setex(cacheKey, 7 * 24 * 60 * 60, JSON.stringify(parsed));
-          console.log(`[AI Cache] Saved for ${cacheHash.substring(0, 8)}`);
+          const cached = await redisSetEx(cacheKey, 7 * 24 * 60 * 60, JSON.stringify(parsed));
+          if (cached) {
+            console.log(`[AI Cache] Saved for ${cacheHash.substring(0, 8)}`);
+          }
         } catch (err) {
           console.error("[AI Cache] Error writing to Redis", err);
         }
