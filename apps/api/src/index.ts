@@ -28,6 +28,9 @@ app.use("/api/v1/auth", AuthRouter);
 app.use("/api/v1/project", ProjectRouter);
 app.use("/api/v1/logs", LogsRouter);
 app.use("/api/v1/error", ErrorRouter);
+app.use("/health" , ()=>{
+    console.log("Health check Success");
+})
 
 const PORT = process.env.PORT || 5000;
 
