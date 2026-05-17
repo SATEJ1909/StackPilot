@@ -4,12 +4,23 @@
   "description": "Browser error logging SDK for StackPilot.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "build": "tsc index.ts --outDir dist --declaration --target ES2019 --module commonjs --moduleResolution Node --skipLibCheck",
-    "check-types": "tsc index.ts --noEmit --skipLibCheck"
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "pnpm run clean && tsc -p tsconfig.json",
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [
     "logging",
@@ -19,6 +30,10 @@
   ],
   "author": "",
   "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "typescript": "^5.9.2"
   }

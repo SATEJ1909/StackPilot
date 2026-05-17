@@ -1,9 +1,11 @@
-type LoggerConfig = {
+export type LoggerConfig = {
   projectKey: string;
   endpoint: string;
+  enabled?: boolean;
+  debug?: boolean;
 };
 
-type ErrorPayload = {
+export type ErrorPayload = {
   projectKey: string;
   message: string;
   stack?: string;
@@ -11,9 +13,14 @@ type ErrorPayload = {
   timestamp: string;
 };
 
+export type StackPilotErrorInput = unknown;
+
 let config: LoggerConfig | null = null;
 let previousOnError: OnErrorEventHandler | null = null;
 let rejectionHandler: ((event: PromiseRejectionEvent) => void) | null = null;
+
+const MAX_MESSAGE_LENGTH = 2_000;
+const MAX_STACK_LENGTH = 20_000;
 
 const getRoute = () => {
   if (typeof window === "undefined") {
@@ -23,32 +30,99 @@ const getRoute = () => {
   return window.location.href;
 };
 
-const sendLog = async (payload: ErrorPayload) => {
+const normalizeEndpoint = (endpoint: string) => endpoint.trim();
+
+const truncate = (value: string, maxLength: number) => {
+  if (value.length <= maxLength) {
+    return value;
+  }
+
+  return `${value.slice(0, maxLength - 3)}...`;
+};
+
+const toErrorDetails = (error: StackPilotErrorInput) => {
+  if (error instanceof Error) {
+    return {
+      message: truncate(error.message || "Unknown error", MAX_MESSAGE_LENGTH),
+      stack: error.stack
+        ? truncate(error.stack, MAX_STACK_LENGTH)
+        : undefined,
+    };
+  }
+
+  if (typeof error === "string") {
+    return {
+      message: truncate(error || "Unknown error", MAX_MESSAGE_LENGTH),
+      stack: undefined,
+    };
+  }
+
   try {
-    await fetch(config!.endpoint, {
+    return {
+      message: truncate(JSON.stringify(error), MAX_MESSAGE_LENGTH),
+      stack: undefined,
+    };
+  } catch {
+    return {
+      message: "Unknown error",
+      stack: undefined,
+    };
+  }
+};
+
+const warn = (message: string) => {
+  if (config?.debug && typeof console !== "undefined") {
+    console.warn(`[StackPilot] ${message}`);
+  }
+};
+
+const isConfigured = () => {
+  if (!config || config.enabled === false) {
+    return false;
+  }
+
+  if (!config.projectKey.trim()) {
+    warn("Missing projectKey.");
+    return false;
+  }
+
+  if (!config.endpoint.trim()) {
+    warn("Missing endpoint.");
+    return false;
+  }
+
+  return true;
+};
+
+const sendLog = async (payload: ErrorPayload) => {
+  if (!isConfigured()) {
+    return;
+  }
+
+  try {
+    await fetch(normalizeEndpoint(config!.endpoint), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
+      keepalive: true,
     });
-  } catch {
+  } catch (error) {
+    warn(error instanceof Error ? error.message : "Failed to send log.");
     // Logging should never break the app.
   }
 };
 
-export const logError = async (error: unknown) => {
-  if (!config) {
+export const logError = async (error: StackPilotErrorInput) => {
+  if (!isConfigured()) {
     return;
   }
 
-  const message =
-    error instanceof Error ? error.message : String(error || "Unknown error");
-
-  const stack = error instanceof Error ? error.stack : undefined;
+  const { message, stack } = toErrorDetails(error);
 
   await sendLog({
-    projectKey: config.projectKey,
+    projectKey: config!.projectKey.trim(),
     message,
     stack,
     route: getRoute(),
@@ -56,15 +130,24 @@ export const logError = async (error: unknown) => {
   });
 };
 
+export const captureError = logError;
+
 export const initLogger = (options: LoggerConfig) => {
-  config = options;
+  config = {
+    ...options,
+    endpoint: normalizeEndpoint(options.endpoint),
+  };
+
+  if (!isConfigured()) {
+    return resetLogger;
+  }
 
   if (typeof window === "undefined") {
-    return;
+    return resetLogger;
   }
 
   if (rejectionHandler) {
-    return;
+    return resetLogger;
   }
 
   previousOnError = window.onerror;
@@ -91,6 +174,8 @@ export const initLogger = (options: LoggerConfig) => {
   };
 
   window.addEventListener("unhandledrejection", rejectionHandler);
+
+  return resetLogger;
 };
 
 export const resetLogger = () => {
