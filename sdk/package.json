@@ -1,5 +1,5 @@
 {
-  "name": "@stackpilot/sdk",
+  "name": "@satejniswade/@stackpilot/sdk",
   "version": "1.0.0",
   "description": "Browser error logging SDK for StackPilot.",
   "main": "dist/index.js",
