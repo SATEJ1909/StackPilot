@@ -13,14 +13,24 @@ import {
   fetchErrorGroup,
   fetchLogs,
   fetchProject,
-  LogEntry,
-  Project,
 } from "@/lib/api";
+import { SOCKET_BASE_URL } from "@/lib/config";
 import { useAuthToken } from "@/lib/auth";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import { SkeletonCard } from "@/app/components/skeleton";
 import { ArrowLeft, RefreshCw, Cpu, Activity, AlertTriangle } from "lucide-react";
+
+type AnalysisUpdatedEvent = {
+  errorGroupId: string;
+  aiData: {
+    type: ErrorGroup["type"];
+    reasoning?: string;
+    cause?: string;
+    fix?: string[];
+    severity: ErrorGroup["severity"];
+  };
+};
 
 export default function ErrorAnalysisPage() {
   const token = useAuthToken();
@@ -62,13 +72,13 @@ export default function ErrorAnalysisPage() {
       return;
     }
 
-    const socket = io(process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000");
+    const socket = io(SOCKET_BASE_URL);
 
     socket.on("connect", () => {
       socket.emit("join_project", projectId);
     });
 
-    socket.on("analysis_updated", (data: any) => {
+    socket.on("analysis_updated", (data: AnalysisUpdatedEvent) => {
       if (data.errorGroupId === errorId) {
         mutateGroup((current) => current ? {
           ...current,

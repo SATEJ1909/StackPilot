@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import useSWR from "swr";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,14 +15,12 @@ import {
   Project,
 } from "@/lib/api";
 import { API_BASE_URL } from "@/lib/config";
-import { clearToken, useAuthToken } from "@/lib/auth";
+import { useAuthToken } from "@/lib/auth";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import { MetricCard } from "@/app/components/metric-card";
-import { SkeletonCard, SkeletonErrorRow, SkeletonProjectItem } from "@/app/components/skeleton";
+import { SkeletonErrorRow, SkeletonProjectItem } from "@/app/components/skeleton";
 import { Plus, Search, Trash2, RefreshCw, Folder, Cpu, Copy, AlertTriangle } from "lucide-react";
-
-type LoadState = "idle" | "loading" | "ready" | "error";
 
 export default function DashboardPage() {
   const token = useAuthToken();
@@ -54,29 +52,23 @@ export default function DashboardPage() {
     ([_, p]) => fetchProjects(p)
   );
 
-  const projects = projectData?.projects || [];
+  const projects = useMemo(() => projectData?.projects || [], [projectData]);
   const totalPages = projectData?.totalPages || 1;
   const projectState = !projectData && !projectError ? "loading" : projectError ? "error" : "ready";
-
-  useEffect(() => {
-    // Auto-select first project if none selected
-    if (projects.length > 0 && !selectedProjectId) {
-      setSelectedProjectId(projects[0]._id);
-    }
-  }, [projects, selectedProjectId]);
+  const activeProjectId = selectedProjectId ?? projects[0]?._id ?? null;
 
   const { data: errorData, error: errorsError, mutate: mutateErrors } = useSWR(
-    selectedProjectId ? ["errorGroups", selectedProjectId] : null,
+    activeProjectId ? ["errorGroups", activeProjectId] : null,
     ([_, id]) => fetchErrorGroups(id),
     { refreshInterval: 15000 }
   );
 
-  const visibleErrors = errorData?.errors || [];
+  const visibleErrors = useMemo(() => errorData?.errors || [], [errorData]);
   const visibleErrorState = !errorData && !errorsError ? "loading" : errorsError ? "error" : "ready";
 
   const selectedProject = useMemo(() => {
-    return projects.find((project) => project._id === selectedProjectId) ?? null;
-  }, [projects, selectedProjectId]);
+    return projects.find((project) => project._id === activeProjectId) ?? null;
+  }, [projects, activeProjectId]);
 
   const filteredErrors = useMemo(() => {
     if (!searchQuery.trim()) return visibleErrors;
@@ -271,7 +263,7 @@ export default function DashboardPage() {
                       type="button"
                       onClick={() => setSelectedProjectId(project._id)}
                       className={`w-full rounded-md border px-3 py-3 text-left transition ${
-                        selectedProjectId === project._id
+                        activeProjectId === project._id
                           ? "border-[#15171a] bg-[#f7f8fa]"
                           : "border-transparent hover:border-[#d8dde5] hover:bg-[#fbfcfd]"
                       }`}
@@ -315,7 +307,7 @@ export default function DashboardPage() {
           <section className="space-y-6">
             <AnimatePresence mode="wait">
               <motion.div
-                key={selectedProjectId || "empty"}
+                key={activeProjectId || "empty"}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}

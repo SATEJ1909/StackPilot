@@ -23,6 +23,8 @@ export function SkeletonText({
   lines?: number;
   className?: string;
 }) {
+  const widths = ["92%", "86%", "78%", "88%"];
+
   return (
     <div className={`space-y-3 ${className}`} aria-hidden="true">
       {Array.from({ length: lines }).map((_, i) => (
@@ -30,7 +32,7 @@ export function SkeletonText({
           key={i}
           className="skeleton h-4"
           style={{
-            width: i === lines - 1 ? "60%" : `${85 + Math.random() * 15}%`,
+            width: i === lines - 1 ? "60%" : widths[i % widths.length],
           }}
         />
       ))}
